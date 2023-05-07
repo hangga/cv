@@ -11,12 +11,14 @@
 	<link rel="stylesheet" type="text/css" href="reset-fonts-grids.css" media="all" /> 
 	<link rel="stylesheet" type="text/css" href="resume.css" media="all" />
 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js "></script>
 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </head>
-<body>
+<body onload="print()">
 
-<div id="doc2" class="yui-t7">
-	<div>
+<div id="doc2" class="yui-t7" style="background: #fff;">
+	<div >
 	
 		<div id="hd">
 			<div class="yui-gc">
@@ -29,6 +31,10 @@
 					<div class="contact-info" >
 						<a target="_blank" href="https://hangga.web.id">Blog</a> | 
 						<a target="_blank" href="https://www.linkedin.com/in/hanggaajisayekti/">Linkedin</a> | <a target="_blank" href="https://github.com/hangga">GitHub</a> | <a target="_blank" href="https://www.hackerrank.com/bazeniancode">HackerRank</a> | <a target="_blank" href="https://hangga.github.io/">Portfolio</a>
+					</br></br>
+						<!-- <h3>
+							<button id="pdf" target="_blank"  onclick="print()">Download PDF</button>
+						</h3> -->
 						<!-- <h3>(313) - 867-5309</h3> -->
 					</div><!--// .contact-info -->
 				</div>
@@ -417,7 +423,23 @@
 
 </div><!--// doc -->
 
+<script>
+	window.jsPDF = window.jspdf.jsPDF;
+	var docPDF = new jsPDF();
 
+	function print() {
+	    var elementHTML = document.querySelector("#doc2");
+	    docPDF.html(elementHTML, {
+	        callback: function(docPDF) {
+	            docPDF.save('Hangga Aji Sayekti.pdf');
+	        },
+	        x: 15,
+	        y: 15,
+	        width: 170,
+	        windowWidth: 950
+	    });
+	}
+</script>
 </body>
 </html>
 
