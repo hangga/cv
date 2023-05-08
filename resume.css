@@ -62,12 +62,12 @@ a:hover { text-decoration: none; }
 strong { font-weight: bold; }
 li { line-height: 24px; border-bottom: 1px solid #ccc; }
 span.skill {
-    color: #990003;
+    color: #f5f5f5;
 /*font-style: italic;*/
 }
 p.skill {
-    color: #990003;
-/*font-style: italic;*/
+    color: #5D6D7E;
+    font-style: italic;
 }
 p.enlarge { font-size: 120%; padding-right: 6.5em; line-height: 20px; }
 p.enlarge span { color: #000 }
@@ -85,7 +85,8 @@ a#pdf:hover { background: #222; }
 .job h4 { 
     position: absolute; 
     top: 2.5em; 
-    right: 0 }
+    right: 0 
+}
 .job p { margin: 0.75em 0 0.75em 0; }
 
 .last { border: none; }
@@ -100,7 +101,7 @@ a#pdf:hover { background: #222; }
 #srt-ttab img.last { margin-top: 20px }
 
 /* --// override to force 1/8th width grids -- */
-.yui-gf .yui-u{width:80.2%;}
+.yui-gf .yui-u{width:82.2%;}
 .yui-gf div.first{width:15.3%;}
 
 
