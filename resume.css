@@ -57,6 +57,12 @@ h2 {
 h3, h4 { font-size: 122%; }
 h1, h2, h3, h4 { color: #333; }
 p { font-size: 110%; line-height: 18px; padding-right: 3em; }
+img.link {
+    background-image: url("external-link-symbol-16.png");
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;px;
+}
 a { color: #990003 }
 a:hover { text-decoration: none; }
 strong { font-weight: bold; }
@@ -66,14 +72,25 @@ span.skill {
 /*font-style: italic;*/
 }
 p.skill {
-    color: #5D6D7E;
-    font-style: italic;
+    /* color: #5516ae; */
+    padding-left: 1em;
+    /* font-style: italic; */
+    display: block;
+    /* padding : 5px; */
+    font-size: 95%;
+    /* background-color: #efebeb; */
+    /* border: 0.01em solid  #000; */
 }
 p.enlarge { font-size: 120%; padding-right: 6.5em; line-height: 20px; }
 p.enlarge span { color: #000 }
 .contact-info { margin-top: 7px; }
 .first h2 { font-style: italic; }
 .last { border-bottom: 0 }
+
+span.course {
+    /* font-style: italic; */
+    font-size: 115%;
+}
 
 
 /* //-- section styles -- */
