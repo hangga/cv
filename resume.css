@@ -78,6 +78,7 @@ p.skill {
     display: block;
     /* padding : 5px; */
     font-size: 95%;
+    padding-bottom: 1.5em;
     /* background-color: #efebeb; */
     /* border: 0.01em solid  #000; */
 }
@@ -104,7 +105,7 @@ a#pdf:hover { background: #222; }
     top: 2.5em; 
     right: 0 
 }
-.job p { margin: 0.75em 0 0.75em 0; }
+.job p { margin: 0.1em 0 0.1em 0; }
 
 .last { border: none; }
 .skills-list {  }
