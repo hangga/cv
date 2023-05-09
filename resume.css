@@ -73,9 +73,10 @@ span.skill {
 /*font-style: italic;*/
 }
 p.skill {
+    color : #700b0b;
     /* color: #5516ae; */
     /* padding-left: 1em; */
-    /* font-style: italic; */
+    font-style: italic;
     display: block;
     /* padding : 5px; */
     font-size: 95%;
@@ -85,7 +86,7 @@ p.skill {
 }
 p.enlarge { font-size: 120%; padding-right: 6.5em; line-height: 20px; }
 p.enlarge span { color: #000 }
-.contact-info { margin-top: 7px; }
+.contact-info { margin-top: 7px; float: right; }
 .first h2 { font-style: italic; }
 .last { border-bottom: 0 }
 
@@ -97,8 +98,31 @@ span.course {
 
 /* //-- section styles -- */
 
-a#pdf { display: block; float: left; background: #666; color: white; padding: 6px 50px 6px 12px; margin-bottom: 6px; text-decoration: none;  }
+a.social {
+    font-size: 90%;
+    width: auto;
+    border-radius: 4px;
+    /* display: block; */
+    background: #666; 
+    color: white; 
+    padding: 4px 8px 4px 8px;
+    text-decoration: none;  
+}
+a.social:hover {
+    background: #222;
+}
+
+a#pdf { display: block; 
+    border-radius: 4px;
+    float: right; 
+    background: #700b0b; 
+    color: white; 
+    padding: 3px 10px 3px 10px;
+    margin-bottom: 6px; 
+    text-decoration: none;  
+}
 a#pdf:hover { background: #222; }
+
 
 .job { position: relative; margin-bottom: 1em; padding-bottom: 0em; border-bottom: 1px solid #ccc; }
 .job h3 {
