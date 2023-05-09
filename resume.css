@@ -54,7 +54,8 @@ h2 {
     font-size: 152%;
 /*    margin-top: 2em;*/
 }
-h3, h4 { font-size: 122%; }
+h3 { font-size: 122%; }
+h4 { font-size: 122%; }
 h1, h2, h3, h4 { color: #333; }
 p { font-size: 110%; line-height: 18px; padding-right: 3em; }
 img.link {
@@ -73,12 +74,12 @@ span.skill {
 }
 p.skill {
     /* color: #5516ae; */
-    padding-left: 1em;
+    /* padding-left: 1em; */
     /* font-style: italic; */
     display: block;
     /* padding : 5px; */
     font-size: 95%;
-    padding-bottom: 1.5em;
+    padding-bottom: 1.8em;
     /* background-color: #efebeb; */
     /* border: 0.01em solid  #000; */
 }
@@ -100,12 +101,21 @@ a#pdf { display: block; float: left; background: #666; color: white; padding: 6p
 a#pdf:hover { background: #222; }
 
 .job { position: relative; margin-bottom: 1em; padding-bottom: 0em; border-bottom: 1px solid #ccc; }
+.job h3 {
+    /* font-weight: bold; */
+    /* color: #fff;
+    display: block;
+    background-color: #666;
+    padding: 4px 4px; */
+}
 .job h4 { 
+    /* padding: 4px 4px;
+    color: #fff; */
     position: absolute; 
     top: 2.5em; 
     right: 0 
 }
-.job p { margin: 0.1em 0 0.1em 0; }
+.job p { margin: 0.2em 0 0.2em 0; }
 
 .last { border: none; }
 .skills-list {  }
