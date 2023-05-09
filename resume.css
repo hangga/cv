@@ -92,6 +92,16 @@ span.course {
     font-size: 115%;
 }
 
+h2.title {
+    display: block;
+    background-color: #666;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    color: #fff;
+}
+
 
 /* //-- section styles -- */
 
