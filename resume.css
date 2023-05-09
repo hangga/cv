@@ -62,7 +62,7 @@ img.link {
     background-image: url("external-link-symbol-16.png");
     width: 16px;
     height: 16px;
-    background-repeat: no-repeat;px;
+    background-repeat: no-repeat;
 }
 a { color: #990003 }
 a:hover { text-decoration: none; }
