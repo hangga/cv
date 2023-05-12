@@ -64,7 +64,7 @@ img.link {
     height: 16px;
     background-repeat: no-repeat;
 }
-a { color: #990003 }
+/* a { color: #990003 } */
 a:hover { text-decoration: none; }
 strong { font-weight: bold; }
 li { line-height: 24px; border-bottom: 1px solid #ccc; }
@@ -134,6 +134,7 @@ a#pdf:hover {
 
 .job { position: relative; margin-bottom: 1em; padding-bottom: 0em; border-bottom: 1px solid #ccc; }
 .job h3 {
+    font-size: 135%;
     /* font-weight: bold; */
     /* color: #fff;
     display: block;
