@@ -148,6 +148,12 @@ a#pdf:hover {
     right: 0 
 }
 .job p { margin: 0.2em 0 0.2em 0; }
+.job .year{
+    position: absolute; 
+    bottom: 0.01em; 
+    right: 0;
+    font-size: 100%;
+}
 
 .last { border: none; }
 .skills-list {  }
