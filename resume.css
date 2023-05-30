@@ -164,7 +164,7 @@ a#pdf:hover {
 }
 
 .last { border: none; }
-.skills-list {  }
+/* .skills-list {  } */
 .skills-list ul { margin: 0; }
 .skills-list li { margin: 3px 0; padding: 3px 0; }
 .skills-list li span { font-size: 152%; display: block; margin-bottom: -2px; padding: 0 }
