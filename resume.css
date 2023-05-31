@@ -18,7 +18,9 @@
 
 /* //-- yui-grids style overrides -- */
 body { 
-    font-family: Georgia; 
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /* font-family: Georgia;  */
+    /* font-family: Garamond; */
     /* font-family :Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
     
     background: #eee;
@@ -57,13 +59,16 @@ body {
 /*    text-transform: uppercase; */
     letter-spacing: 3px; }
 h2 { 
-    font-size: 152%;
+    font-style: italic;
+    font-size: 160%;
+    margin-bottom: 6px;
+    /* font-size: 152%; */
 /*    margin-top: 2em;*/
 }
 h3 { font-size: 122%; }
 h4 { font-size: 122%; }
 h1, h2, h3, h4 { color: #333; }
-p { font-size: 110%; line-height: 18px; padding-right: 3em; }
+p { font-size: 110%; line-height: 20px; padding-right: 3em; }
 img.link {
     background-image: url("external-link-symbol-16.png");
     width: 16px;
@@ -79,13 +84,15 @@ span.skill {
 /*font-style: italic;*/
 }
 p.skill {
-    
+    font-family: Copperplate;
+    font-weight: 300;
+    line-height: 16px;
     /* color: #5516ae; */
     /* padding-left: 1em; */
     /* font-style: italic; */
     display: block;
     /* padding : 5px; */
-    font-size: 100%;
+    font-size: 90%;
     padding-bottom: 1.8em;
     /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
     /* background-color: #efebeb; */
@@ -141,7 +148,10 @@ a#pdf:hover {
 
 .job { position: relative; margin-bottom: 1em; padding-bottom: 0em; border-bottom: 1px solid #ccc; }
 .job h3 {
-    font-size: 135%;
+    font-size: 115%;
+    font-family: Copperplate;
+    font-weight: 300;
+    /* font-style: italic; */
     /* font-weight: bold; */
     /* color: #fff;
     display: block;
@@ -151,8 +161,11 @@ a#pdf:hover {
 .job h4 { 
     /* padding: 4px 4px;
     color: #fff; */
+    /* font-family: Copperplate; */
+    font-weight: 200;
+    font-size: 110%;
     position: absolute; 
-    top: 2.5em; 
+    top: 3.5em; 
     right: 0 
 }
 .job p { margin: 0.2em 0 0.2em 0; }
