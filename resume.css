@@ -145,11 +145,42 @@ a#pdf:hover {
     border: 1px solid #700b0b;
 }
 
+.cert { position: relative; margin-bottom: 1em; padding-bottom: 0em; border-bottom: 1px solid #ccc; }
+.cert h2 {
+    font-weight: 100;
+    font-size: 140%;
+}
+.cert h3 {
+    font-size: 120%;
+    /* font-family: Copperplate;
+    font-weight: 100; */
+    /* font-style: italic; */
+    /* font-weight: bold; */
+    /* color: #fff;
+    display: block;
+    background-color: #666;
+    padding: 4px 4px; */
+}
+.cert h4 { 
+    /* padding: 4px 4px;
+    color: #fff; */
+    /* font-family: Copperplate; */
+    font-weight: 200;
+    font-size: 110%;
+    position: absolute; 
+    top: 3.5em; 
+    right: 0 
+}
+.cert p {
+    font-family: Copperplate;
+    font-style: normal;
+}
 
 .job { position: relative; margin-bottom: 1em; padding-bottom: 0em; border-bottom: 1px solid #ccc; }
 .job h2 {
     font-weight: 100;
-    font-size: 140%;
+    /* font-size: 140%; */
+    font-style: normal;
 }
 .job h3 {
     font-size: 115%;
@@ -188,7 +219,7 @@ a#pdf:hover {
 .talent { width: 33.3%; float: left; 
     /* font-size: 100%; */
 }
-.talent h2 { margin-bottom: 6px; }
+.talent h2 { margin-bottom: 6px; font-style: normal;}
 .talent li {font-size: 120%;}
 
 #srt-ttab { margin-bottom: 100px; text-align: center;  }
