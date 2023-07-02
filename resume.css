@@ -18,7 +18,8 @@
 
 /* //-- yui-grids style overrides -- */
 body { 
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Garamond;
+    font-weight: 100;
     /* font-family: Georgia;  */
     /* font-family: Garamond; */
     /* font-family :Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
@@ -84,15 +85,15 @@ span.skill {
 /*font-style: italic;*/
 }
 p.skill {
-    font-family: Copperplate;
+    /* font-family: Copperplate; */
     font-weight: 300;
-    line-height: 16px;
+    /* line-height: 18px; */
     /* color: #5516ae; */
     /* padding-left: 1em; */
     /* font-style: italic; */
     display: block;
     /* padding : 5px; */
-    font-size: 90%;
+    /* font-size: 120%; */
     padding-bottom: 1.8em;
     /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
     /* background-color: #efebeb; */
@@ -172,19 +173,20 @@ a#pdf:hover {
     right: 0 
 }
 .cert p {
-    font-family: Copperplate;
+    /* font-family: Copperplate; */
     font-style: normal;
 }
 
 .job { position: relative; margin-bottom: 1em; padding-bottom: 0em; border-bottom: 1px solid #ccc; }
 .job h2 {
-    font-weight: 100;
-    /* font-size: 140%; */
+    /* font-weight: 100; */
+    font-size: 120%;
     font-style: normal;
 }
 .job h3 {
-    font-size: 115%;
-    font-family: Copperplate;
+    font-size: 150%;
+    line-height: 24px;
+    /* font-family: Copperplate; */
     font-weight: 400;
     /* font-style: italic; */
     /* font-weight: bold; */
