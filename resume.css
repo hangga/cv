@@ -179,13 +179,13 @@ a#pdf:hover {
 .job { position: relative; margin-bottom: 1em; padding-bottom: 0em; border-bottom: 1px solid #ccc; }
 .job h2 {
     font-weight: 100;
-    /* font-size: 140%; */
+    font-size: 135%;
     font-style: normal;
 }
 .job h3 {
-    font-size: 115%;
+    font-size: 125%;
     font-family: Copperplate;
-    font-weight: 400;
+    font-weight: 700;
     /* font-style: italic; */
     /* font-weight: bold; */
     /* color: #fff;
