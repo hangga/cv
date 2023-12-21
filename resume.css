@@ -259,7 +259,9 @@ a#pdf:hover {
     /* font-size: 100%; */
 }
 .talent h2 { margin-bottom: 6px; font-style: normal;}
-.talent li {font-size: 120%;}
+.talent li {margin-left: 10px;} 
+
+.talent ul {padding: 0px; margin-bottom: 0px; margin-left: 10px }
 
 #srt-ttab { margin-bottom: 100px; text-align: center;  }
 #srt-ttab img.last { margin-top: 20px }
