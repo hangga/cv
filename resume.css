@@ -18,15 +18,22 @@
 
 /* //-- yui-grids style overrides -- */
 body { 
-    yfont-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Source Sans Pro', sans-serif;
+      
+       font-size: 14px;
+       -webkit-font-smoothing: subpixel-antialiased;
+    /*font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;*/
     /* font-family: Georgia;  */
     /* font-family: Garamond; */
     /* font-family :Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
     
-    background: #eee;
+    background: #fff;
+    letter-spacing: 0.5px;
+    
     /* line-height: 200%; */
-    color: #444; 
 }
+
+
 
 #inner { 
     padding: 10px 80px; 
@@ -55,20 +62,28 @@ body {
 
 /* //-- core typography and style -- */
 #hd h1 { 
+    color: #BA0018;
+    font-family: 'Merriweather', serif;
     font-size: 38px; 
 /*    text-transform: uppercase; */
     letter-spacing: 3px; }
+
+#hd h3{
+    color: #BA0018;
+}    
 h2 { 
-    font-style: italic;
-    font-size: 160%;
+    /*font-style: italic;*/
+    font-weight: 700;
+    font-family: 'Merriweather', serif;
+    font-size: 130%;
     margin-bottom: 6px;
     /* font-size: 152%; */
 /*    margin-top: 2em;*/
 }
 h3 { font-size: 122%; }
 h4 { font-size: 122%; }
-h1, h2, h3, h4 { color: #333; }
-p { font-size: 110%; line-height: 20px; padding-right: 3em; }
+h1, h3, h4 { color: #333; }
+p { font-size: 110%; line-height: 20px; padding-right: 3em; padding-top: 10px;}
 img.link {
     background-image: url("external-link-symbol-16.png");
     width: 16px;
@@ -84,16 +99,17 @@ span.skill {
 /*font-style: italic;*/
 }
 p.skill {
-    font-family: Copperplate;
+    /*font-family: Copperplate;*/
+    padding-top: 8px;
     font-weight: 300;
-    line-height: 16px;
+    line-height: 20px;
     /* color: #5516ae; */
     /* padding-left: 1em; */
     /* font-style: italic; */
     display: block;
     /* padding : 5px; */
-    font-size: 90%;
-    padding-bottom: 1.8em;
+    font-size: 14.5px;
+    padding-bottom: 1.0em;
     /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
     /* background-color: #efebeb; */
     /* border: 0.01em solid  #000; */
@@ -101,7 +117,7 @@ p.skill {
 p.enlarge { font-size: 120%; padding-right: 6.5em; line-height: 20px; }
 p.enlarge span { color: #000 }
 .contact-info { margin-top: 7px; float: right; }
-.first h2 { font-style: italic; }
+/*.first h2 { font-style: italic; }*/
 .last { border-bottom: 0 }
 
 span.course {
@@ -178,14 +194,17 @@ a#pdf:hover {
 
 .job { position: relative; margin-bottom: 1em; padding-bottom: 0em; border-bottom: 1px solid #ccc; }
 .job h2 {
-    font-weight: 100;
-    font-size: 135%;
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+    font-size: 18px;
     font-style: normal;
 }
 .job h3 {
-    font-size: 125%;
-    font-family: Copperplate;
-    font-weight: 700;
+    font-size: 16px;
+    /* font-family: 'Merriweather', serif; */
+    /*color: #700b0b;*/
+    /*font-family: Copperplate;*/
+    font-weight: bold;
     /* font-style: italic; */
     /* font-weight: bold; */
     /* color: #fff;
@@ -199,21 +218,41 @@ a#pdf:hover {
     /* font-family: Copperplate; */
     font-weight: 200;
     font-size: 110%;
+    color: #aaa;
     position: absolute; 
     top: 3.5em; 
-    right: 0 
+    right: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+         text-transform:uppercase;
 }
-.job p { margin: 0.2em 0 0.2em 0; }
+.job p { margin: 0.2em 0 0.2em 0; line-height: 22px;}
 .job .year{
     position: absolute; 
     bottom: 0.01em; 
     right: 0;
     font-size: 100%;
 }
+.job ul{
+    padding-top: 10px;
+    list-style: square outside;
+    margin-left: 20px;
+    padding-left: 0;
+    
+    list-style-type: circle;
+    font-size: 110%;
+} 
+
+.job li{
+    border: none;
+    line-height: 23px;
+    font-size: 14.5px;
+    list-style-type: circle;
+    color: #666;
+}
 
 .last { border: none; }
 /* .skills-list {  } */
-.skills-list ul { margin: 0; }
+.skills-list ul { margin: 10; }
 .skills-list li { margin: 3px 0; padding: 3px 0; }
 .skills-list li span { font-size: 152%; display: block; margin-bottom: -2px; padding: 0 }
 .talent { width: 33.3%; float: left; 
@@ -228,5 +267,8 @@ a#pdf:hover {
 /* --// override to force 1/8th width grids -- */
 .yui-gf .yui-u{width:82.2%;}
 .yui-gf div.first{width:15.3%;}
+.yui-gf div.first h2{
+    color: #BA0018;
+}
 
 
