@@ -27,7 +27,7 @@ body {
     /* font-family: Garamond; */
     /* font-family :Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
     
-    background: #fff;
+    background: #ddd;
     letter-spacing: 0.5px;
     
     /* line-height: 200%; */
@@ -41,9 +41,10 @@ body {
     /* background: #f5f5f5;  */
     background: #fff;
     border: solid #666; 
-    border-width: 8px 0 2px 0; 
+    border-width: 6px 0 2px 0; 
 }
-.yui-gf { margin-bottom: 2em; padding-bottom: 2em; border-bottom: 1px solid #ccc; }
+
+.yui-gf { margin-bottom: 2em; padding-bottom: 2em; border-bottom: 1px solid #ddd }
 
 /* //-- header, body, footer -- */
 #hd { 
@@ -92,8 +93,9 @@ img.link {
 }
 /* a { color: #990003 } */
 a:hover { text-decoration: none; }
-strong { font-weight: bold; }
-li { line-height: 24px; border-bottom: 1px solid #ccc; }
+strong { font-weight: bold; font-family: 'Merriweather', serif; font-size: 14px;
+    letter-spacing: 1.6px;}
+li { line-height: 24px; border-bottom: 1px solid #ddd }
 span.skill {
     color: #f5f5f5;
 /*font-style: italic;*/
@@ -128,8 +130,9 @@ span.course {
 
 /* //-- section styles -- */
 
+
 a.social {
-    border: 1px solid #666;
+    border: 1px solid #BA0018;
     font-size: 90%;
     width: auto;
     border-radius: 3px;
@@ -138,11 +141,14 @@ a.social {
     /* color: white;  */
     padding: 4px 5px 4px 5px;
     text-decoration: none;  
-    color: #444;
+    color: #BA0018;
 }
 a.social:hover {
-    background: #222;
+    border-radius: 3px;
+    border: 1px solid #BA0018;
+    background: #BA0018;
     color: white;
+    font-weight: bold;
 }
 
 a#pdf { display: block; 
@@ -161,7 +167,7 @@ a#pdf:hover {
     border: 1px solid #700b0b;
 }
 
-.cert { position: relative; margin-bottom: 1em; padding-bottom: 0em; border-bottom: 1px solid #ccc; }
+.cert { position: relative; margin-bottom: 1em; padding-bottom: 0em; border-bottom: 1px solid #ddd }
 .cert h2 {
     font-weight: 100;
     font-size: 140%;
@@ -190,21 +196,38 @@ a#pdf:hover {
 .cert p {
     font-family: Copperplate;
     font-style: normal;
+    padding-bottom: 10px;
 }
 
-.job { position: relative; margin-bottom: 1em; padding-bottom: 0em; border-bottom: 1px solid #ccc; }
+.job { position: relative; margin-bottom: 1em; padding-bottom: 0em; border-bottom: 1px solid #ddd }
+/* 
+.job::before{
+    margin-top: 30px;
+    margin-left: -20px;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 60%; 
+    width: 1px; 
+    background-color:#BA0018;
+} */
+
 .job h2 {
-    font-family: 'Merriweather', serif;
+    /* font-family: 'Merriweather', serif; */
+    /* margin-left: -22px; */
     font-weight: 700;
     font-size: 18px;
     font-style: normal;
+    
 }
 .job h3 {
-    font-size: 16px;
+    font-size: 18px;
+    margin-top: 14px;
     /* font-family: 'Merriweather', serif; */
     /*color: #700b0b;*/
-    /*font-family: Copperplate;*/
-    font-weight: bold;
+   /*  font-family: Copperplate; */
+    /* font-weight: bold; */
     /* font-style: italic; */
     /* font-weight: bold; */
     /* color: #fff;
@@ -217,13 +240,15 @@ a#pdf:hover {
     color: #fff; */
     /* font-family: Copperplate; */
     font-weight: 200;
-    font-size: 110%;
+    font-size: 14px;
     color: #aaa;
     position: absolute; 
     top: 3.5em; 
     right: 0;
     font-family: 'Source Sans Pro', sans-serif;
          text-transform:uppercase;
+
+         top:1.5em;
 }
 .job p { margin: 0.2em 0 0.2em 0; line-height: 22px;}
 .job .year{
@@ -239,7 +264,7 @@ a#pdf:hover {
     padding-left: 0;
     
     list-style-type: circle;
-    font-size: 110%;
+    font-size: 14.4px;
 } 
 
 .job li{
@@ -271,6 +296,10 @@ a#pdf:hover {
 .yui-gf div.first{width:15.3%;}
 .yui-gf div.first h2{
     color: #BA0018;
+}
+
+.imglink{
+    margin-left: 14px; margin-top:3px; position:absolute;
 }
 
 
