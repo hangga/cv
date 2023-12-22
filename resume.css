@@ -27,7 +27,7 @@ body {
     /* font-family: Garamond; */
     /* font-family :Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
     
-    background: #ddd;
+    background: #fff;
     letter-spacing: 0.5px;
     
     /* line-height: 200%; */
@@ -92,7 +92,26 @@ img.link {
     background-repeat: no-repeat;
 }
 /* a { color: #990003 } */
-a:hover { text-decoration: none; }
+a {
+    color: #BA0018;
+    text-decoration: none;
+    padding-left: 1px;
+    padding-right: 1px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+a:hover { 
+    text-decoration: none; 
+    /* display: block; */
+    background-color: #BA0018;
+    padding-left: 1px;
+    padding-right: 1px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    color: #fff;
+    border-radius: 5px;
+
+}
 strong { font-weight: bold; font-family: 'Merriweather', serif; font-size: 14px;
     letter-spacing: 1.6px;}
 li { line-height: 24px; border-bottom: 1px solid #ddd }
@@ -167,7 +186,7 @@ a#pdf:hover {
     border: 1px solid #700b0b;
 }
 
-.cert { position: relative; margin-bottom: 1em; padding-bottom: 0em; border-bottom: 1px solid #ddd }
+.cert { position: relative; margin-bottom: 1em; padding-bottom: 0.5em; border-bottom: 1px solid #ddd }
 .cert h2 {
     font-weight: 100;
     font-size: 140%;
@@ -190,8 +209,12 @@ a#pdf:hover {
     font-weight: 200;
     font-size: 110%;
     position: absolute; 
-    top: 3.5em; 
-    right: 0 
+    top: 0em; 
+    align-self: baseline;
+    color: #aaa; 
+    right: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+         text-transform:uppercase;
 }
 .cert p {
     font-family: Copperplate;
@@ -299,7 +322,11 @@ a#pdf:hover {
 }
 
 .imglink{
-    margin-left: 14px; margin-top:3px; position:absolute;
+    margin-left: 10px; margin-top:4px; position:absolute;
 }
+
+/* .yui-u h3 {
+    margin-bottom: 16px;
+} */
 
 
