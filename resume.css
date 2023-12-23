@@ -151,8 +151,9 @@ span.course {
 
 
 a.social {
-    border: 1px solid #BA0018;
-    font-size: 90%;
+    border: 1px solid #FFF;
+    font-size: 13px;
+    font-weight: 700;
     width: auto;
     border-radius: 3px;
     /* display: block; */
@@ -187,12 +188,22 @@ a#pdf:hover {
 }
 
 .cert { position: relative; margin-bottom: 1em; padding-bottom: 0.5em; border-bottom: 1px solid #ddd }
+.cert .datefull {
+    font-size: 14px;
+    float: right;
+    color: #666;
+    color: #aaa; 
+    right: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+         text-transform:uppercase;
+}
 .cert h2 {
     font-weight: 100;
     font-size: 140%;
 }
 .cert h3 {
     font-size: 120%;
+    margin-bottom: 10px;
     /* font-family: Copperplate;
     font-weight: 100; */
     /* font-style: italic; */
@@ -202,10 +213,10 @@ a#pdf:hover {
     background-color: #666;
     padding: 4px 4px; */
 }
-.cert h4 { 
-    /* padding: 4px 4px;
-    color: #fff; */
-    /* font-family: Copperplate; */
+/*  .cert h4 { 
+    padding: 4px 4px;
+    color: #fff; 
+    font-family: Copperplate;
     font-weight: 200;
     font-size: 110%;
     position: absolute; 
@@ -215,7 +226,7 @@ a#pdf:hover {
     right: 0;
     font-family: 'Source Sans Pro', sans-serif;
          text-transform:uppercase;
-}
+} */
 .cert p {
     font-family: Copperplate;
     font-style: normal;
@@ -242,9 +253,11 @@ a#pdf:hover {
     font-weight: 700;
     font-size: 18px;
     font-style: normal;
+    color: #000;
     
 }
 .job h3 {
+    color: #000;
     font-size: 18px;
     margin-top: 14px;
     /* font-family: 'Merriweather', serif; */
@@ -258,10 +271,10 @@ a#pdf:hover {
     background-color: #666;
     padding: 4px 4px; */
 }
-.job h4 { 
-    /* padding: 4px 4px;
-    color: #fff; */
-    /* font-family: Copperplate; */
+/* .job h4 { 
+    padding: 4px 4px;
+    color: #fff;
+    font-family: Copperplate;
     font-weight: 200;
     font-size: 14px;
     color: #aaa;
@@ -272,7 +285,7 @@ a#pdf:hover {
          text-transform:uppercase;
 
          top:1.5em;
-}
+} */
 .job p { margin: 0.2em 0 0.2em 0; line-height: 22px;}
 .job .year{
     position: absolute; 
@@ -287,16 +300,37 @@ a#pdf:hover {
     padding-left: 0;
     
     list-style-type: circle;
-    font-size: 14.4px;
+    font-size: 14.6px;
 } 
 
 .job li{
     border: none;
-    line-height: 23px;
-    font-size: 14.5px;
+    line-height: 22px;
+    font-size: 14.6px;
     list-style-type: circle;
-    color: #666;
+    color: #222;
 }
+.job .date {
+    padding-right: 22%;
+    float: right;
+    color: #666;
+    color: #aaa; 
+    right: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+         /* text-transform:uppercase; */
+}
+
+.job .datefull {
+    font-size: 14px;
+    float: right;
+    color: #666;
+    color: #aaa; 
+    right: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+         text-transform:uppercase;
+}
+
+
 
 .last { border: none; }
 /* .skills-list {  } */
@@ -307,7 +341,7 @@ a#pdf:hover {
     /* font-size: 100%; */
 }
 .talent h2 { margin-bottom: 6px; font-style: normal;}
-.talent li {margin-left: 10px;} 
+.talent li {margin-left: 10px;  } 
 
 .talent ul {padding: 0px; margin-bottom: 0px; margin-left: 10px }
 
