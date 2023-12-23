@@ -49,6 +49,7 @@ body {
 /* //-- header, body, footer -- */
 #hd { 
     margin: 2.5em 0 3em 0; 
+    padding-top: 40px;
     padding-bottom: 1.5em; 
     border-bottom: 1px solid #ccc 
 }
@@ -85,12 +86,12 @@ h3 { font-size: 122%; }
 h4 { font-size: 122%; }
 h1, h3, h4 { color: #333; }
 p { font-size: 110%; line-height: 20px; padding-right: 3em; padding-top: 10px;}
-img.link {
+/* img.link {
     background-image: url("external-link-symbol-16.png");
     width: 16px;
     height: 16px;
     background-repeat: no-repeat;
-}
+} */
 /* a { color: #990003 } */
 a {
     color: #BA0018;
@@ -146,9 +147,7 @@ span.course {
     font-size: 115%;
 }
 
-
 /* //-- section styles -- */
-
 
 a.social {
     border: 1px solid #BA0018;

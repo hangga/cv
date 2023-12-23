@@ -2,7 +2,7 @@
 <html>
 <head>
 
-	<title>Hangga Aji Sayekti | a Passionate Programmer</title>
+	<title>Resume | Hangga Aji Sayekti | a Passionate Programmer</title>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 
 	<meta name="keywords" content="" />
@@ -14,15 +14,9 @@
 
 	<script src="jspdf.umd.min.js "></script>
 	<script src="html2canvas.min.js"></script>
-	<!--
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
--->
+	
 	<link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,700|Source+Sans+Pro:400,400i" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-<!-- 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js "></script>
-
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script> -->
 
 </head>
 <body>
@@ -592,28 +586,6 @@
 
 </div><!--// doc -->
 
-<script>
-	window.jsPDF = window.jspdf.jsPDF;
-	var docPDF = new jsPDF();
-
-	function print() {
-	    var elementHTML = document.querySelector("#subinner");
-	    docPDF.html(elementHTML, {
-	        callback: function(docPDF) {
-	            docPDF.save('Hangga Aji Sayekti.pdf');
-	        },
-	        x: 15,
-	        y: 15,
-	        width: 170,
-	        windowWidth: 950
-	    });
-	}
-
-	function printable(){
-		var e = document.getElementById("inner");
-		e.id = "bukaninner";
-	}
-</script>
 </body>
 </html>
 
