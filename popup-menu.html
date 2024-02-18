@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Popup Menu</title>
+<style>
+  /* Style untuk popup menu */
+  .popup-menu {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 150px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+  }
+  
+  /* Style untuk setiap link dalam menu */
+  .popup-menu a {
+    color: black;
+    padding: 8px 0;
+    display: block;
+    text-decoration: none;
+  }
+  
+  /* Style saat kursor diarahkan ke link */
+  .popup-menu a:hover {
+    background-color: #f1f1f1;
+  }
+</style>
+</head>
+<body>
+
+<!-- Element yang akan memunculkan popup menu saat diklik -->
+<button onclick="togglePopupMenu()">Tampilkan Menu</button>
+
+<!-- Elemen untuk popup menu -->
+<div id="myPopupMenu" class="popup-menu">
+  <a href="https://www.example.com">Link 1</a>
+  <a href="https://www.example.com">Link 2</a>
+  <a href="https://www.example.com">Link 3</a>
+</div>
+
+<script>
+function togglePopupMenu() {
+  var popupMenu = document.getElementById("myPopupMenu");
+  if (popupMenu.style.display === "block") {
+    popupMenu.style.display = "none";
+  } else {
+    popupMenu.style.display = "block";
+  }
+}
+
+// Menyembunyikan popup menu saat pengguna mengklik di luar menu
+window.onclick = function(event) {
+  var popupMenu = document.getElementById("myPopupMenu");
+  if (event.target !== popupMenu && !popupMenu.contains(event.target)) {
+    popupMenu.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
