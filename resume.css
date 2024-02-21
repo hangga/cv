@@ -18,16 +18,11 @@
 
 /* //-- yui-grids style overrides -- */
 body { 
-<<<<<<< HEAD
-    font-family: Garamond;
-    font-weight: 100;
-=======
     font-family: 'Source Sans Pro', sans-serif;
       
        font-size: 14px;
        -webkit-font-smoothing: subpixel-antialiased;
     /*font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;*/
->>>>>>> ceb8f03e7c389080c92de7b9dc0dea332b5ac3a7
     /* font-family: Georgia;  */
     /* font-family: Garamond; */
     /* font-family :Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
@@ -126,28 +121,16 @@ span.skill {
 /*font-style: italic;*/
 }
 p.skill {
-<<<<<<< HEAD
     /* font-family: Copperplate; */
     font-weight: 300;
     /* line-height: 18px; */
-=======
-    /*font-family: Copperplate;*/
-    padding-top: 8px;
-    font-weight: 300;
-    line-height: 20px;
->>>>>>> ceb8f03e7c389080c92de7b9dc0dea332b5ac3a7
     /* color: #5516ae; */
     /* padding-left: 1em; */
     /* font-style: italic; */
     display: block;
     /* padding : 5px; */
-<<<<<<< HEAD
-    /* font-size: 120%; */
-    padding-bottom: 1.8em;
-=======
     font-size: 14.5px;
     padding-bottom: 1.0em;
->>>>>>> ceb8f03e7c389080c92de7b9dc0dea332b5ac3a7
     /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
     /* background-color: #efebeb; */
     /* border: 0.01em solid  #000; */
@@ -262,26 +245,15 @@ a#pdf:hover {
 } */
 
 .job h2 {
-<<<<<<< HEAD
-    /* font-weight: 100; */
-    font-size: 120%;
-=======
     /* font-family: 'Merriweather', serif; */
     /* margin-left: -22px; */
     font-weight: 700;
     font-size: 18px;
->>>>>>> ceb8f03e7c389080c92de7b9dc0dea332b5ac3a7
     font-style: normal;
     color: #000;
     
 }
 .job h3 {
-<<<<<<< HEAD
-    font-size: 150%;
-    line-height: 24px;
-    /* font-family: Copperplate; */
-    font-weight: 400;
-=======
     color: #000;
     font-size: 18px;
     margin-top: 14px;
@@ -289,7 +261,6 @@ a#pdf:hover {
     /*color: #700b0b;*/
    /*  font-family: Copperplate; */
     /* font-weight: bold; */
->>>>>>> ceb8f03e7c389080c92de7b9dc0dea332b5ac3a7
     /* font-style: italic; */
     /* font-weight: bold; */
     /* color: #fff;
