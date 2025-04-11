@@ -134,6 +134,20 @@ p.skill {
     /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
     /* background-color: #efebeb; */
     /* border: 0.01em solid  #000; */
+    /* border-left: 6px solid  #efebeb; */
+    /* padding-left: 20px; */
+    
+}
+p.skill::before{
+    color: #BA0018;
+    content: "Tech ";
+    border: 1px solid #BA0018;
+    width: auto;
+    /* background-color: #BA0018; */
+    padding: 2px 4px 2px 8px;
+    margin-right: 10px;
+    border-radius: 0px 0px 0px 16px;
+    font-size: 11px;
 }
 p.enlarge { font-size: 120%; padding-right: 6.5em; line-height: 20px; }
 p.enlarge span { color: #000 }
@@ -341,6 +355,14 @@ a#pdf:hover {
 .talent li {margin-left: 10px;  } 
 
 .talent ul {padding: 0px; margin-bottom: 0px; margin-left: 10px }
+
+/* li::before {
+    content: " --> ";
+    position: absolute;
+    left: 0;
+    color: #2c3e50;
+    font-weight: smaller;
+  } */
 
 #srt-ttab { margin-bottom: 100px; text-align: center;  }
 #srt-ttab img.last { margin-top: 20px }
