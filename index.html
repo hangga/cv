@@ -29,7 +29,7 @@
 				<div class="yui-gc">
 					<div class="yui-u first" style="width: 50%;">
 						<h1>Hangga Aji Sayekti</h1>
-						<h3>a Passionate Programmer</h3>
+						<h3><div id="bio">Loading...</div></h3>
 					</div>
 
 					<div class="yui-u" style="margin-left: 0px; width: 50%; float: right;">
@@ -71,7 +71,7 @@
 							</div>
 						</div> -->
 
-						<div class="yui-gf">
+						<!-- <div class="yui-gf">
 							<div class="yui-u first">
 								<h2>Programming</h2>
 							</div>
@@ -99,12 +99,13 @@
 									<li><strong>Delphi</strong><span class="date">2008 - 2017</span></li>
 									<li><strong>Matlab</strong><span class="date">at college</span></li>
 									<li><strong>Pascal</strong><span class="date">at college</span></li>
-									<!-- <li><strong>C</strong><span class="date">at college</span></li> -->
+								    <li><strong>C</strong><span class="date">at college</span></li> 
 									
 								  </ul>
 								</div>
 							  </div>
-						</div><!--// .yui-gf-->
+						</div> -->
+						<!--// .yui-gf-->
 					
 						<!--// .yui-gf -->
 						<div class="yui-gf">
@@ -121,17 +122,19 @@
 												<li>SDK (Software Development Kit)</li>
 											<!-- </ul> -->
 										</li>
-										<li>Software Architecture</li>
-										<li>Technical Fellow wannabe</li>
+										<!-- <li>Software Architecture</li> -->
+										<li>Mathematical Computation</li>
+										<!-- <li>RnD, Tools & Library, SDK, Security Awareness, Ethical Hacking.</li> -->
+										<!-- <li>Technical Fellow wannabe</li> -->
 									</ul>
-									<!-- <p>RnD, Tools & Library, SDK, Security Awareness, Ethical Hacking.</p> -->
+									
 								</div>
 
 									<div class="talent">
 										<!-- <h2>Development</h2> -->
 										<ul class="job last">
 											<!-- <li>Mobile App</li> -->
-											<li>Artificial Intelligence
+											<li>AI (Artificial Intelligence)</li>
 												<ul class="job last">
 													<li>Machine Learning</li>
 													<!-- <li>Computer Vision</li> -->
@@ -139,7 +142,7 @@
 													<li>Liveness Detection</li>
 												</ul>
 											</li>
-											<li>KYC (Know Your Customer)</li>
+											<!-- <li>KYC (Know Your Customer)</li> -->
 											
 										</ul>
 										<!-- <p>Mobile App, AI(ML, Computer Vision, Face Detection, Liveness Detection, KYC), Software Architechture.</p> -->
@@ -155,10 +158,11 @@
 											<!-- <li>Leadership</li> -->
 											<!-- <li>Mentoring</li> -->
 											<!-- <li>Motivation</li> -->
-											<li>Technical Writing</li>
+											<!-- <li>Technical Writing</li> -->
 											<!-- <li>Security Awareness</li> -->
 											 <li>Cyber Security</li>
 											<li>Ethical Hacking</li>
+											<li>Writing & blogging</li>
 											<li>Linux (btw i use arch for daily use)</li>
 											
 										</ul>
@@ -690,13 +694,31 @@
 </body>
 <script>
 	// Get the target text element by its ID
-	var targetTextElement = document.getElementById('targetText');
+	// var targetTextElement = document.getElementById('targetText');
 
-	// Select the text content
-	var range = document.createRange();
-	range.selectNode(targetTextElement);
-	window.getSelection().removeAllRanges();
-	window.getSelection().addRange(range);
+	// // Select the text content
+	// var range = document.createRange();
+	// range.selectNode(targetTextElement);
+	// window.getSelection().removeAllRanges();
+	// window.getSelection().addRange(range);
+
+
+	fetch('https://api.github.com/users/hangga')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok ' + response.statusText);
+        }
+        return response.json();
+      })
+      .then(data => {
+        // Ambil data bio dan tampilkan di div dengan id="bio"
+        const bioDiv = document.getElementById('bio');
+        bioDiv.textContent = data.bio || 'Bio tidak tersedia.';
+      })
+      .catch(error => {
+        // console.error('Terjadi kesalahan:', error);
+        // document.getElementById('bio').textContent = 'Gagal memuat bio.';
+      });
 </script>
 <script async data-id="101439339" src="//static.getclicky.com/js"></script>
 <noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101439339ns.gif" /></p></noscript>
