@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=SF+Mono:wght@300;400;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Left Sidebar -->
+    <div class="left-sidebar">
+        <div class="social-links">
+            <a href="#" aria-label="GitHub"><i class='bx bxl-github'></i></a>
+            <a href="#" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+            <a href="#" aria-label="Twitter"><i class='bx bxl-twitter'></i></a>
+            <a href="#" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>
+        </div>
+        <div class="sidebar-line"></div>
+    </div>
+
+    <!-- Right Sidebar -->
+    <div class="right-sidebar">
+        <div class="email-wrapper">
+            <a href="mailto:your.email@example.com">your.email@example.com</a>
+        </div>
+        <div class="sidebar-line"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#" aria-label="Home">Y</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about" class="nav-link"><span class="nav-number">01.</span> About</a></li>
+                <li><a href="#experience" class="nav-link"><span class="nav-number">02.</span> Experience</a></li>
+                <li><a href="#work" class="nav-link"><span class="nav-number">03.</span> Work</a></li>
+                <li><a href="#writings" class="nav-link"><span class="nav-number">04.</span> Writings</a></li>
+                <li><a href="#contact" class="nav-link"><span class="nav-number">05.</span> Contact</a></li>
+            </ul>
+            <div class="nav-resume">
+                <a href="#" class="resume-btn">Resume</a>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Menu">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-container">
+            <button class="mobile-close-btn" aria-label="Close menu">
+                <i class='bx bx-x'></i>
+            </button>
+            <ul class="mobile-links">
+                <li><a href="#about" class="mobile-link"><span>01.</span> About</a></li>
+                <li><a href="#experience" class="mobile-link"><span>02.</span> Experience</a></li>
+                <li><a href="#work" class="mobile-link"><span>03.</span> Work</a></li>
+                <li><a href="#writings" class="mobile-link"><span>04.</span> Writings</a></li>
+                <li><a href="#contact" class="mobile-link"><span>05.</span> Contact</a></li>
+            </ul>
+            <div class="mobile-resume">
+                <a href="#" class="resume-btn">Resume</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="section">
+            <div class="container">
+                <p class="hero-greeting">Hi, my name is</p>
+                <h1 class="hero-name">Your Name.</h1>
+                <h2 class="hero-title">I build things for the web.</h2>
+                <p class="hero-description">
+                    I'm a software developer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I'm focused on building accessible, human-centered products at <a href="#" class="inline-link">Upstatement</a>.
+                </p>
+                <a href="#work" class="cta-button">Check out my work!</a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title"><span class="section-number">01.</span> About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Hello! I'm [Your Name], a passionate web developer who enjoys creating digital experiences. My journey in web development started [your story].</p>
+                        <p>Fast-forward to today, and I've had the privilege of working at <a href="#" class="inline-link">an advertising agency</a>, <a href="#" class="inline-link">a start-up</a>, and <a href="#" class="inline-link">a huge corporation</a>.</p>
+                        <p>Here are a few technologies I've been working with recently:</p>
+                        <ul class="skills-list">
+                            <li>JavaScript (ES6+)</li>
+                            <li>TypeScript</li>
+                            <li>React</li>
+                            <li>Node.js</li>
+                            <li>Python</li>
+                            <li>GraphQL</li>
+                        </ul>
+                    </div>
+                    <div class="about-image">
+                        <div class="image-wrapper">
+                            <div class="image-frame"></div>
+                            <img src="https://via.placeholder.com/300x300/64ffda/0a192f?text=Your+Photo" alt="Your Name">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section">
+            <div class="container">
+                <h2 class="section-title"><span class="section-number">02.</span> Where I've Worked</h2>
+                <div class="experience-tabs">
+                    <div class="tab-buttons">
+                        <button class="tab-button active" data-tab="tab1">Upstatement</button>
+                        <button class="tab-button" data-tab="tab2">Scout</button>
+                        <button class="tab-button" data-tab="tab3">Apple</button>
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab-panel active" id="tab1">
+                            <h3>Engineer <span class="company">@ Upstatement</span></h3>
+                            <p class="period">May 2018 - Present</p>
+                            <ul>
+                                <li>Write modern, performant, maintainable code for a diverse array of client and internal projects</li>
+                                <li>Work with a variety of different languages, platforms, frameworks, and content management systems such as JavaScript, TypeScript, React, and WordPress</li>
+                                <li>Communicate with multi-disciplinary teams of engineers, designers, producers, and clients on a daily basis</li>
+                            </ul>
+                        </div>
+                        <div class="tab-panel" id="tab2">
+                            <h3>UI Developer <span class="company">@ Scout</span></h3>
+                            <p class="period">April 2017 - May 2018</p>
+                            <ul>
+                                <li>Developed and maintained code for in-house and client websites primarily using HTML, CSS, Sass, JavaScript</li>
+                                <li>Interfaced with clients on a weekly basis, providing technological expertise</li>
+                            </ul>
+                        </div>
+                        <div class="tab-panel" id="tab3">
+                            <h3>Software Engineer <span class="company">@ Apple</span></h3>
+                            <p class="period">Jan 2016 - April 2017</p>
+                            <ul>
+                                <li>Worked on the iOS development team for the App Store</li>
+                                <li>Contributed to the development of new features and bug fixes</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work Section -->
+        <section id="work" class="section">
+            <div class="container">
+                <h2 class="section-title"><span class="section-number">03.</span> Some Things I've Built</h2>
+                <div class="featured-projects">
+                    <!-- Projects will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Writings Section -->
+        <section id="writings" class="section">
+            <div class="container">
+                <h2 class="section-title"><span class="section-number">04.</span> Writings</h2>
+                <div class="writings-grid">
+                    <!-- Writings will be populated by JavaScript -->
+                </div>
+                <div class="writings-more">
+                    <a href="#" class="archive-link">View Full Archive</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section-title"><span class="section-number">05.</span> What's Next?</h2>
+                <h3 class="contact-title">Get In Touch</h3>
+                <p class="contact-description">
+                    I'm currently looking for new opportunities! Whether you have a question or just want to say hi, I'll try my best to get back to you!
+                </p>
+                <a href="mailto:youremail@example.com" class="cta-button">Say Hello</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="social-links">
+                    <a href="#" aria-label="GitHub"><i class='bx bxl-github'></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+                    <a href="#" aria-label="Twitter"><i class='bx bxl-twitter'></i></a>
+                    <a href="#" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>
+                </div>
+                <p class="footer-text">Built by You &copy; 2025</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

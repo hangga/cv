@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hangga Aji Sayekti - Resume</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;600;700&family=Fira+Code&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: "Inter", sans-serif;
+      line-height: 1.7;
+      color: #2c2c2c;
+      background: #f3f4f6;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2.5rem 1rem;
+    }
+
+    h1 {
+      font-family: "Poppins", sans-serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+      color: #111827;
+    }
+
+    h2 {
+      font-family: "Poppins", sans-serif;
+      font-size: 1.35rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+      background-image: linear-gradient(to right, #2563eb, #06b6d4);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    h3 {
+      font-family: "Poppins", sans-serif;
+      font-size: 1.05rem;
+      margin-top: 0.5rem;
+      font-weight: 600;
+      color: #0f172a;
+    }
+
+    p, li { font-size: 0.95rem; color: #374151; }
+
+    .header { margin-bottom: 2rem; text-align: center; }
+    .subheader { font-size: 0.95rem; margin-bottom: 0.5rem; color: #6b7280; }
+    .links { font-size: 0.9rem; margin-top: 0.4rem; color: #444; }
+    .links a { color: #2563eb; text-decoration: none; font-weight: 500; transition: color 0.2s ease; }
+    .links a:hover { color: #1e40af; }
+
+    section {
+      background: #ffffff;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      margin-bottom: 2rem;
+      transition: transform 0.2s ease;
+    }
+    section:hover { transform: translateY(-2px); }
+
+    ul { list-style: none; margin: 0.5rem 0; padding-left: 1.2rem; }
+    ul li { position: relative; margin-bottom: 0.4rem; }
+    ul li::before {
+      content: "•";
+      position: absolute;
+      left: -1.2rem;
+      color: #2563eb;
+      font-weight: bold;
+    }
+
+    .job { margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px dashed #e5e7eb; }
+    .job:last-child { border-bottom: none; }
+    .job-meta {
+      display: flex; justify-content: space-between;
+      align-items: center; font-size: 0.9rem;
+      margin-bottom: 0.4rem; color: #555;
+      flex-wrap: wrap; gap: 0.5rem;
+    }
+
+    .job-title {
+        display: inline-flex;
+        font-size: 0.7rem;
+        font-weight: 600;
+        color: #fff;
+        border-radius: 4px;
+        overflow: hidden;
+        }
+
+        .job-title span {
+        position: relative;
+        padding: 0.1rem 0.5rem 0.1rem 0.9rem;
+        display: flex;
+        align-items: center;
+        }
+
+        /* warna blok */
+        .job-title span:first-child { background: #1e293b; }
+        .job-title span:nth-child(2) { background: #2563eb; }
+        .job-title span:last-child { background: #06b6d4; }
+
+        /* arrow effect */
+        .job-title span::after {
+        content: "";
+        position: absolute;
+        right: -10px;
+        top: 0;
+        width: 0; height: 0;
+        border-top: 1.15rem solid transparent;
+        border-bottom: 1.15rem solid transparent;
+        border-left: 10px solid;
+        z-index: 2;
+        }
+
+        /* warna arrow sesuai blok */
+        .job-title span:first-child::after { border-left-color: #1e293b; }
+        .job-title span:nth-child(2)::after { border-left-color: #2563eb; }
+
+        /* blok terakhir tanpa arrow */
+        .job-title span:last-child::after { display: none; }
+
+
+    .job-date {
+      font-weight: 500;
+      color: #1e293b;
+      background: #f1f5f9;
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-size: 0.75rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <h1>Hangga Aji Sayekti</h1>
+    <div class="subheader">Greater Yogyakarta, Indonesia</div>
+    <div class="links">
+      <a href="https://www.linkedin.com/in/hanggaajisayekti">LinkedIn</a> | 
+      <a href="https://hangga.github.io">Portfolio</a> | 
+      <a href="https://hangga.github.io/blog">Blog</a>
+    </div>
+  </header>
+
+  <section>
+    <h2>Summary</h2>
+    <p>Security researcher, Pentester and Technical Author with a strong foundation as a programmer since 2008. Experienced in penetration testing, bug bounty hunting, and writing technical content on Linux, security, and DevOps. Leveraging a long background in software engineering to deliver secure, reliable, and well-documented solutions.</p>
+  </section>
+
+  <section>
+    <h2>Core Competencies / Skills</h2>
+    <ul>
+      <li><strong>Software Engineering:</strong> Android (Java, Kotlin, RxJava, Retrofit), iOS (Swift, SwiftUI, Alamofire), CI/CD (CircleCI, GitLab, Azure DevOps)</li>
+      <li><strong>Cybersecurity:</strong> Web & Android Penetration Testing, Vulnerability Scanning, API Security Testing</li>
+      <li><strong>Leadership & Product:</strong> Head of Product & Engineering, Team Mentoring, R&amp;D</li>
+      <li><strong>Tools:</strong> Firebase, ML Kit (Google/Firebase/Huawei), Maven Repository, Microsoft Azure DevOps</li>
+      <li><strong>Writing & Reviewing:</strong> Technical Content Authoring (CircleCI, Baeldung, Linux Handbook), Content Advisory (LogRocket)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+
+    <div class="job">
+      <h3>Linux Handbook – India | Remote</h3>
+      <div class="job-meta">
+        <div class="job-title"><span>Author</span><span></span><span></span></div>
+        <span class="job-date">Sep 2025 – Present</span>
+      </div>
+      <ul>
+        <li>Write articles focused on Linux administration, system security, and penetration testing.</li>
+        <li>Create hands-on tutorials for Linux users, sysadmins, and security engineers.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <h3>CircleCI – San Francisco, CA, USA | Remote</h3>
+      <div class="job-meta">
+        <div class="job-title"><span>Technical Code Reviewer</span><span></span><span></span></div>
+        <span class="job-date">May 2025 – Present</span>
+      </div>
+      <ul>
+        <li>Reviewed tutorial code for CircleCI blog: tested code samples, verified builds, and ensured content quality and consistency.</li>
+      </ul>
+      <div class="job-meta">
+        <div class="job-title"><span>Tech Author</span><span></span></div>
+        <span class="job-date">Feb 2025 – Present</span>
+      </div>
+      <ul>
+        <li>Wrote technical content on CI/CD automation, security testing, and performance optimization.</li>
+        <li>Integrated vulnerability scanning tools into build pipelines.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <h3>LogRocket – Boston, MA, USA | Remote</h3>
+      <div class="job-meta">
+        <div class="job-title"><span>Content Advisory Board</span><span></span><span></span></div>
+        <span class="job-date">Sep 2024 – May 2025</span>
+      </div>
+      <ul>
+        <li>Reviewed and rated software development articles and provided actionable feedback to improve content quality.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <h3>Kredibel – Jakarta, Indonesia | Remote</h3>
+      <div class="job-meta">
+        <div class="job-title"><span>Head of Product & Engineering</span><span></span><span></span></div>
+        <span class="job-date">Aug 2023 – Feb 2025</span>
+      </div>
+      <ul>
+        <li>Led R&amp;D of new features, technology implementation, and managed app releases to Google Play & App Store.</li>
+      </ul>
+      <div class="job-meta">
+        <div class="job-title"><span>Senior Mobile Engineer</span><span></span><span></span></div>
+        <span class="job-date">Sep 2020 – Feb 2025</span>
+      </div>
+      <ul>
+        <li>Developed Android & iOS apps from scratch.</li>
+        <li>Built Kredibel Vision SDK and managed internal Maven repository.</li>
+        <li>Conducted R&amp;D on ML libraries (Google/Firebase/Huawei ML Kit).</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <h3>Baeldung – Bucharest, Romania | Remote</h3>
+      <div class="job-meta">
+        <div class="job-title"><span>Author (Java & Kotlin series)</span><span></span><span></span></div>
+        <span class="job-date">Oct 2023 – Oct 2024</span>
+      </div>
+      <ul>
+        <li>Wrote JVM ecosystem tutorials/articles, built sample projects, and performed unit testing under editorial guidance.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <h3>Sebangsa Network – Yogyakarta, Indonesia | Onsite</h3>
+      <div class="job-meta">
+        <div class="job-title"><span>Lead Android Engineer</span><span></span><span></span></div>
+        <span class="job-date">Aug 2015 – Mar 2020</span>
+      </div>
+      <ul>
+        <li>Led Android development team through coding, testing, bug fixing, staging, and production releases.</li>
+        <li>Directed research and implementation of new technologies.</li>
+      </ul>
+      <div class="job-meta">
+        <div class="job-title"><span>Senior Android Developer</span><span></span><span></span></div>
+        <span class="job-date">2015 – 2017</span>
+      </div>
+      <ul>
+        <li>Contribute to Sebangsa, Arena, “M” projects and mentoring junior.</li>
+      </ul>
+      <div class="job-meta">
+        <div class="job-title"><span>Android Developer</span><span></span><span></span></div>
+        <span class="job-date">Jan 2013 – Aug 2015</span>
+      </div>
+      <ul>
+        <li>Develop Sebangsa apps from scratch.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <h3>Pondok Programmer – Bantul, Indonesia | Onsite</h3>
+      <div class="job-meta">
+        <div class="job-title"><span>Teacher</span><span></span><span></span></div>
+        <span class="job-date">Jun 2015 – Dec 2015</span>
+      </div>
+      <ul>
+        <li>Designed syllabus, taught Android development, and guided students on projects.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <h3>Universitas Negeri Yogyakarta – Yogyakarta, Indonesia | Onsite</h3>
+      <div class="job-meta">
+        <div class="job-title"><span>Programmer</span><span></span><span></span></div>
+        <span class="job-date">Mar 2010 – Dec 2012</span>
+      </div>
+      <ul>
+        <li>Developed and maintained information systems (student registration, finance, election counting, and event websites).</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <h3>CV. Solusi Netindo – Yogyakarta, Indonesia | Onsite</h3>
+      <div class="job-meta">
+        <div class="job-title"><span>Delphi Programmer</span><span></span><span></span></div>
+        <span class="job-date">Jun 2008 – Nov 2010</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <p><strong>Universitas Negeri Yogyakarta</strong> — B.Sc. Mathematics <span class="job-date">2002 – 2009</span></p>
+  </section>
+
+  <section>
+    <h2>Certifications</h2>
+    <ul>
+      <li><a href="https://learn.eccouncil.org/certificate/f773daad-2dfd-4501-adff-940124dd7d60?logged=true">SQL Injection Attacks – EC-Council Learning</a></li>
+      <li><a href="https://elearning.securityblue.team/home/certificate/281113316">Introduction to Penetration Testing</a></li>
+      <li><a href="https://learn.eccouncil.org/certificate/6c69658e-c781-4270-a4f2-7153eed0f0e3?logged=true">Android Bug Bounty Hunting</a></li>
+      <li><a href="https://raw.githubusercontent.com/hangga/cv/main/img/Hangga%20Aji%20Sayekti.jpg">Information Security Management System Awareness ISO/IEC 27001:2013</a></li>
+    </ul>
+  </section>
+
+</body>
+</html>

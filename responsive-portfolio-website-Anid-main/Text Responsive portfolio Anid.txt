@@ -1,0 +1,219 @@
+========== NAV ==========
+.nav__logo
+Anid
+
+.nav__link
+About Us - Projects - Contact
+
+
+========== HOME ==========
+.home__greeting
+Hello, I'm
+
+.home__name
+Anid <br> Wrooks
+
+.home__split
+Creative
+
+.home__profession-1 .home__profession-2
+Developer
+& Designer
+
+.home__social
+https://www.linkedin.com/
+https://github.com/
+https://dribbble.com/
+https://about.gitlab.com/
+
+.home__cv
+RESUME
+
+
+========== ABOUT ==========
+.section__title
+<span>Creativity</span> 
+<br> Is My Passion
+
+.about__description
+I'm a web <b>developer and designer</b> passionate 
+about experimenting with new <b>skills and creativity.</b> 
+Driven by learning and curiosity, I'm always looking to 
+explore and learn new development and design skills.
+
+.button
+Resume
+
+
+========== PROJECTS ==========
+.section__title
+I Make Incredible <br>
+<span>Projects</span>
+
+.projects__number h1 - h3 .projects__title .projects__subtitle .projects__description
+01
+Web
+Barbershop <br> website
+Technologies used
+HTML, CSS, JavaScript, Gsap, Swiper Js and Figma.
+
+02
+Design
+Interface Design <br> For Ice Cream Shop
+Technologies used
+HTML, CSS, JavaScript, Gsap, Swiper Js and Figma.
+
+03
+Web
+SEO For Coffee <br> Websites
+Technologies used
+HTML, CSS, JavaScript, Gsap, Swiper Js and Figma.
+
+04
+Design
+Web Design <br> For Restaurant
+Technologies used
+HTML, CSS, JavaScript, Gsap, Swiper Js and Figma.
+
+05
+Web
+Fast Food <br> Website
+Technologies used
+HTML, CSS, JavaScript, Gsap, Swiper Js and Figma.
+
+
+========== WORK ==========
+.section__title
+<span>My Work</span> 
+<br> Experience
+
+.work__button
+Experience
+Education
+
+.work__title .work__subtitle .work__year .work__description
+Web <br> Developer
+Google Inc
+2020
+Web developer handling technologies such as Angular, 
+databases, CMS, assisting with web optimization.
+
+Web <br> Designer
+Google Inc
+2022
+Web developer handling technologies such as Angular, 
+databases, CMS, assisting with web optimization.
+
+SEO & Web <br> Optimization
+Google Inc
+Now
+Web developer handling technologies such as Angular, 
+databases, CMS, assisting with web optimization.
+
+Systems <br> Engineering
+University
+2010
+College student, learning the basics of programming, 
+web development, and other topics, graduating with honors.
+
+Web <br> Programming
+University
+2015
+College student, learning the basics of programming, 
+web development, and other topics, graduating with honors.
+
+Usability <br> (UX/UI)
+University
+2018
+College student, learning the basics of programming, 
+web development, and other topics, graduating with honors.
+
+
+========== SERVICES ==========
+.section__title
+What I <span>Offer</span>
+
+.services__title .services__description .services__subtitle .services__skills
+Developer
+Website creation with HTML, CSS, JavaScript. 
+Professional websites with TypeScript, React, 
+Node JS, and lots of creativity.
+
+Skills & Tools
+HTML - CSS - JavaScript - React - TypeScript
+Node Js - Next Js - PHP - GitHub
+
+Design
+Web designer with Figma and Sketch, creating 
+motion designs with After Effects, creativity 
+and design at its best.
+
+Skills & Tools
+Figma - Adobe XD - Photoshop - Ilustrator
+Sketch - 3D Modeling - After Effects
+
+
+========== TESTIMONIALS ==========
+.section__title
+<span>What They Say</span> 
+<br> About Me
+
+.testimonials__name
+Abex Wrooks
+Willer Morth
+Llemi Llorens
+Jems Guiller
+
+.testimonials__number
+5.0
+
+.testimonials p
+The company offers many easy-to-use services, 
+with hard work and round-the-clock support on 
+all projects.
+
+
+========== CONTACT ==========
+.section__title
+Contact Me
+
+.contact__description
+Tell me about your next project.
+
+.contact__button
+Copy email
+
+.contact__email
+anid123@email.com
+
+.contact__title
+Email
+Location
+Social Media
+Write Me & We'll Talk
+
+.contact__address
+Willer123@email.com
+Lima, Peru
+
+.contact__link
+Linkedin - GitHub - Dribbble - GitLab
+
+https://www.linkedin.com/
+https://github.com/
+https://dribbble.com/
+https://about.gitlab.com/
+
+WhatsApp - Messenger - Telegram -  instagram
+
+https://api.whatsapp.com/send?phone=51123456789&text=Hello, more information!
+https://m.me/bedimcode
+https://t.me/telegram
+https://www.instagram.com/
+
+========== FOOTER ==========
+.footer__copy
+All Rights Reserved By <span>Bedimcode</span>
+
+.footer__year
+&#169; 2025

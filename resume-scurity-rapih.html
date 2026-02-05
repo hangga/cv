@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangga Aji Sayekti - Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e293b;
+            --accent-color: #3b82f6;
+            --light-color: #f8fafc;
+            --border-color: #e2e8f0;
+            --text-color: #334155;
+            --text-light: #64748b;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #fff;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .resume-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 30px;
+            background: white;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border-radius: 12px;
+            overflow: hidden;
+            padding: 30px;
+        }
+        
+        /* Header Styles */
+        .header {
+            grid-column: 1 / -1;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 20px;
+        }
+        
+        .name {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+            margin-bottom: 5px;
+        }
+        
+        .title {
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        
+        .contact-item i {
+            color: var(--primary-color);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        
+        .social-link {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        
+        .social-link:hover {
+            color: var(--accent-color);
+            text-decoration: underline;
+        }
+        
+        /* Sidebar Styles */
+        .sidebar {
+            background-color: var(--light-color);
+            padding: 25px;
+            border-radius: 10px;
+        }
+        
+        .section-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--primary-color);
+        }
+        
+        .skills-grid {
+            display: grid;
+            gap: 15px;
+        }
+        
+        .skill-category {
+            margin-bottom: 5px;
+        }
+        
+        .skill-name {
+            font-weight: 600;
+            color: var(--secondary-color);
+            margin-bottom: 5px;
+        }
+        
+        .skill-list {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        
+        /* Main Content Styles */
+        .main-content {
+            padding-top: 5px;
+        }
+        
+        .section {
+            margin-bottom: 25px;
+        }
+        
+        .experience-item, .education-item {
+            margin-bottom: 20px;
+        }
+        
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 8px;
+        }
+        
+        .job-title {
+            font-weight: 600;
+            color: var(--secondary-color);
+            font-size: 1.05rem;
+        }
+        
+        .company {
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+        
+        .date {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            background-color: var(--light-color);
+            padding: 3px 8px;
+            border-radius: 4px;
+        }
+        
+        .job-description {
+            color: var(--text-color);
+            font-size: 0.95rem;
+        }
+        
+        .job-description ul {
+            padding-left: 20px;
+            margin-top: 8px;
+        }
+        
+        .job-description li {
+            margin-bottom: 5px;
+        }
+        
+        .certification-item {
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+        }
+        
+        .certification-item a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .certification-item a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .resume-container {
+                grid-template-columns: 1fr;
+                padding: 20px;
+            }
+            
+            .header {
+                text-align: center;
+            }
+            
+            .contact-info {
+                justify-content: center;
+            }
+            
+            .social-links {
+                justify-content: center;
+            }
+            
+            .job-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
+            }
+        }
+        
+        @media print {
+            body {
+                padding: 0;
+            }
+            
+            .resume-container {
+                box-shadow: none;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <!-- Header Section -->
+        <div class="header">
+            <h1 class="name">Hangga Aji Sayekti</h1>
+            <div class="title">Software Engineer | Technical Author | Security Researcher</div>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Greater Yogyakarta, Indonesia</span>
+                </div>
+            </div>
+            
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/hanggaajisayekti" class="social-link" target="_blank">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="https://github.com/hangga" class="social-link" target="_blank">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://hangga.web.id" class="social-link" target="_blank">
+                    <i class="fas fa-briefcase"></i> Portfolio
+                </a>
+                <a href="https://hangga.github.io/blog" class="social-link" target="_blank">
+                    <i class="fas fa-blog"></i> Blog
+                </a>
+            </div>
+        </div>
+        
+        <!-- Sidebar Section -->
+        <div class="sidebar">
+            <!-- Summary -->
+            <div class="section">
+                <h2 class="section-title">Summary</h2>
+                <p style="font-size: 0.95rem; color: var(--text-color);">
+                    Software Engineer, Technical Author, and Security Researcher with 15+ years of experience delivering mobile applications, CI/CD automation, and secure systems. Strong expertise in Android & iOS development combined with penetration testing to identify vulnerabilities and harden production environments.
+                </p>
+            </div>
+            
+            <!-- Core Skills -->
+            <div class="section">
+                <h2 class="section-title">Core Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <div class="skill-name">Cybersecurity</div>
+                        <div class="skill-list">Web & Android Penetration Testing, OWASP Top 10, Kali Linux, Burp Suite, Jadx, SQLMap, Nuclei, MobSF</div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <div class="skill-name">Mobile Engineering</div>
+                        <div class="skill-list">Android (Java, Kotlin, RxJava, Retrofit), iOS (Swift, SwiftUI, Alamofire)</div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <div class="skill-name">DevOps & CI/CD</div>
+                        <div class="skill-list">CircleCI, GitLab CI, Automated Testing, Security Scanning</div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <div class="skill-name">Leadership</div>
+                        <div class="skill-list">Product Strategy, Engineering Management, R&D, Mentorship</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Education -->
+            <div class="section">
+                <h2 class="section-title">Education</h2>
+                <div class="education-item">
+                    <div class="job-title">Bachelor of Science in Mathematics</div>
+                    <div class="company">Universitas Negeri Yogyakarta</div>
+                    <div class="date">2002 – 2009</div>
+                </div>
+            </div>
+            
+            <!-- Certifications -->
+            <div class="section">
+                <h2 class="section-title">Certifications</h2>
+                <div class="certification-item">
+                    <a href="https://www.credly.com/badges/f9dbc237-4bce-4084-8372-cc88dc0231e8/public_url" target="_blank">Creating Effective Documentation for Developers</a>
+                </div>
+                <div class="certification-item">
+                    <a href="https://www.credly.com/badges/a03ff500-6cf4-4d01-87b9-f5bbbba83cc4/public_url" target="_blank">Ethical Hacker – Cisco</a>
+                </div>
+                <div class="certification-item">
+                    <a href="https://www.credly.com/badges/4e82b187-15af-486d-a16f-476080712cec/public_url" target="_blank">OWASP Top 10 Security Threats</a>
+                </div>
+                <div class="certification-item">
+                    <a href="https://learn.eccouncil.org/certificate/f773daad-2dfd-4501-adff-940124dd7d60" target="_blank">SQL Injection Attacks – EC-Council</a>
+                </div>
+                <div class="certification-item">
+                    <a href="https://elearning.securityblue.team/home/certificate/281113316" target="_blank">Introduction to Penetration Testing</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Content Section -->
+        <div class="main-content">
+            <!-- Professional Experience -->
+            <div class="section">
+                <h2 class="section-title">Professional Experience</h2>
+                
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Contributing Author</div>
+                            <div class="company">It's FOSS / LinuxHandbook</div>
+                        </div>
+                        <div class="date">Sep 2025 – Present</div>
+                    </div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Produce in-depth tutorials on Kali Linux, penetration testing techniques, and cybersecurity best practices.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Technical Code Reviewer & Author</div>
+                            <div class="company">CircleCI</div>
+                        </div>
+                        <div class="date">Feb 2025 – Present</div>
+                    </div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Validated CI/CD tutorial repositories, ensured build reliability, and enforced secure development practices.</li>
+                            <li>Authored articles on pipeline automation, performance optimization, and security testing.</li>
+                            <li>Integrated vulnerability scanning tools into continuous integration workflows.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Freelance Security Researcher (Bug Bounty)</div>
+                            <div class="company">HackerOne, Bugcrowd, BugBase.ai</div>
+                        </div>
+                        <div class="date">2024 – Present</div>
+                    </div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Identified and responsibly disclosed critical web vulnerabilities including Broken Access Control, IDOR, unauthenticated APIs, rate-limit bypass, and sensitive data exposure.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Author – Java & Kotlin</div>
+                            <div class="company">Baeldung</div>
+                        </div>
+                        <div class="date">Oct 2023 – Oct 2024</div>
+                    </div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Created JVM-focused technical tutorials with production-grade code samples and automated testing.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Head of Product & Engineering</div>
+                            <div class="company">Kredibel – Jakarta, Indonesia</div>
+                        </div>
+                        <div class="date">Aug 2023 – Feb 2025</div>
+                    </div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Led product roadmap, R&D initiatives, and mobile platform releases across Android and iOS.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Senior Mobile Software Engineer</div>
+                            <div class="company">Kredibel – Jakarta, Indonesia</div>
+                        </div>
+                        <div class="date">Sep 2020 – Feb 2025</div>
+                    </div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Architected and delivered mobile applications from concept to production.</li>
+                            <li>Built Kredibel Vision SDK and managed internal artifact repositories.</li>
+                            <li>Researched and integrated machine learning libraries for mobile use cases.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Lead Android Engineer</div>
+                            <div class="company">Sebangsa Network – Yogyakarta, Indonesia</div>
+                        </div>
+                        <div class="date">Aug 2015 – Mar 2020</div>
+                    </div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Managed Android engineering team and end-to-end release lifecycle.</li>
+                            <li>Drove adoption of modern mobile technologies and development standards.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Information System Programmer</div>
+                            <div class="company">Universitas Negeri Yogyakarta</div>
+                        </div>
+                        <div class="date">Mar 2010 – Dec 2012</div>
+                    </div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Designed and maintained institutional systems for enrollment, finance, elections, and digital events.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Publications -->
+            <div class="section">
+                <h2 class="section-title">Publications & Technical Writing</h2>
+                <div class="job-description">
+                    <ul>
+                        <li><a href="https://www.baeldung.com/author/hanggaajisayekti" target="_blank">Baeldung</a> – JVM-focused technical tutorials</li>
+                        <li><a href="https://circleci.com/blog/author/hangga-aji-sayekti/" target="_blank">CircleCI Blog</a> – CI/CD and security testing</li>
+                        <li><a href="https://linuxhandbook.com/author/hangga/" target="_blank">LinuxHandbook</a> – Kali Linux and cybersecurity</li>
+                        <li><a href="https://docs.vultr.com/author/hangga-aji-sayekti" target="_blank">Vultr Documentation</a> – Technical documentation</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Teaching & Mentorship -->
+            <div class="section">
+                <h2 class="section-title">Teaching & Mentorship</h2>
+                
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Kampus Merdeka Mentor</div>
+                            <div class="company">Universitas Negeri Yogyakarta</div>
+                        </div>
+                        <div class="date">Apr 2021 – Jun 2021</div>
+                    </div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Delivered industry-aligned mobile development workshops.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Android Development Mentor</div>
+                            <div class="company">Pondok Programmer – Bantul, Indonesia</div>
+                        </div>
+                        <div class="date">Jun 2015 – Dec 2015</div>
+                    </div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Designed curriculum and mentored students through real-world projects.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Simple script to handle print optimization
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add print-friendly class when printing
+            window.addEventListener('beforeprint', function() {
+                document.body.classList.add('printing');
+            });
+            
+            window.addEventListener('afterprint', function() {
+                document.body.classList.remove('printing');
+            });
+        });
+    </script>
+</body>
+</html>
