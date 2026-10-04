@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<title>Hangga Aji Sayekti — Application Security Engineer</title>
+<style>
+  :root{
+    --ink:#1a1f2b;
+    --muted:#5b6575;
+    --line:#e3e7ee;
+    --accent:#0f5c8c;
+    --accent-soft:#eef4f9;
+    --bg:#f6f7f9;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0;}
+
+  body{
+    font-family:"Inter","Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;
+    background:var(--bg);
+    color:var(--ink);
+    line-height:1.6;
+    font-size:15px;
+    -webkit-font-smoothing:antialiased;
+    padding:40px 16px;
+  }
+
+  .page{
+    max-width:900px;
+    margin:0 auto;
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:14px;
+    overflow:hidden;
+    box-shadow:0 10px 40px rgba(20,30,50,.07);
+  }
+
+  /* ---------- HEADER ---------- */
+  header{
+    padding:44px 48px 36px;
+    border-bottom:1px solid var(--line);
+    background:linear-gradient(180deg,#ffffff 0%,#fbfcfd 100%);
+  }
+
+  .name{
+    font-size:32px;
+    font-weight:700;
+    letter-spacing:-.5px;
+    line-height:1.2;
+  }
+
+  .role{
+    margin-top:6px;
+    font-size:16px;
+    font-weight:600;
+    color:var(--accent);
+    letter-spacing:.2px;
+  }
+
+  .tagline{
+    margin-top:14px;
+    color:var(--muted);
+    max-width:640px;
+    font-size:14.5px;
+  }
+
+  .meta{
+    margin-top:22px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px 10px;
+  }
+
+  .meta span{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    font-size:13px;
+    color:var(--muted);
+    background:var(--accent-soft);
+    border:1px solid #dde8f1;
+    padding:5px 11px;
+    border-radius:100px;
+  }
+
+  .meta a{color:var(--accent);text-decoration:none;}
+  .meta a:hover{text-decoration:underline;}
+
+  /* ---------- BODY ---------- */
+  main{padding:0 48px 48px;}
+
+  section{padding:34px 0 0;}
+
+  section + section{border-top:1px solid var(--line);margin-top:34px;}
+
+  h2{
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:1.6px;
+    font-weight:700;
+    color:var(--accent);
+    margin-bottom:18px;
+  }
+
+  p{color:#39414f;}
+
+  .lead{font-size:14.5px;color:#39414f;}
+
+  /* Focus list */
+  .focus{
+    margin-top:18px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:8px 22px;
+    list-style:none;
+  }
+
+  .focus li{
+    position:relative;
+    padding-left:18px;
+    font-size:14px;
+    color:#39414f;
+  }
+
+  .focus li::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:9px;
+    width:6px;
+    height:6px;
+    border-radius:50%;
+    background:var(--accent);
+    opacity:.75;
+  }
+
+  /* ---------- EXPERIENCE ---------- */
+  .job{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:4px;
+    padding-bottom:26px;
+  }
+
+  .job:last-child{padding-bottom:0;}
+
+  .job-head{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    align-items:baseline;
+    gap:4px 16px;
+  }
+
+  .job-title{
+    font-size:15.5px;
+    font-weight:650;
+    color:var(--ink);
+  }
+
+  .job-company{
+    font-size:14px;
+    color:var(--accent);
+    font-weight:500;
+  }
+
+  .job-date{
+    font-size:12.5px;
+    color:var(--muted);
+    white-space:nowrap;
+    font-variant-numeric:tabular-nums;
+  }
+
+  .job-loc{
+    font-size:12.5px;
+    color:var(--muted);
+    font-style:italic;
+  }
+
+  .job ul{
+    margin-top:10px;
+    list-style:none;
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+  }
+
+  .job ul li{
+    position:relative;
+    padding-left:16px;
+    font-size:14px;
+    color:#39414f;
+  }
+
+  .job ul li::before{
+    content:"—";
+    position:absolute;
+    left:0;
+    color:var(--accent);
+    opacity:.5;
+    font-size:12px;
+  }
+
+  .stack{
+    margin-top:10px;
+    font-size:12.5px;
+    color:var(--muted);
+    border-left:3px solid var(--accent-soft);
+    padding-left:10px;
+  }
+
+  .stack strong{color:#4a5462;font-weight:600;}
+
+  /* ---------- CERTS ---------- */
+  .cert-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:14px;
+  }
+
+  .cert{
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:14px 16px;
+    background:#fcfdfe;
+    transition:border-color .2s ease, transform .2s ease;
+  }
+
+  .cert:hover{border-color:#c9dced;transform:translateY(-1px);}
+
+  .cert-name{
+    font-size:14px;
+    font-weight:600;
+    color:var(--ink);
+    line-height:1.4;
+  }
+
+  .cert-issuer{
+    font-size:12.5px;
+    color:var(--accent);
+    margin-top:3px;
+  }
+
+  .cert-year{
+    font-size:12px;
+    color:var(--muted);
+    margin-top:2px;
+  }
+
+  /* ---------- EDUCATION ---------- */
+  .edu-head{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    align-items:baseline;
+    gap:4px 16px;
+  }
+
+  /* ---------- SKILLS ---------- */
+  .chips{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+  }
+
+  .chips span{
+    font-size:12.5px;
+    color:#3c4757;
+    background:#f2f5f9;
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:5px 10px;
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    padding:22px 48px;
+    border-top:1px solid var(--line);
+    background:#fbfcfd;
+    font-size:12.5px;
+    color:var(--muted);
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    gap:8px;
+  }
+
+  footer a{color:var(--accent);text-decoration:none;}
+  footer a:hover{text-decoration:underline;}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width:640px){
+    body{padding:16px 8px;}
+    header{padding:32px 24px 26px;}
+    main{padding:0 24px 32px;}
+    footer{padding:20px 24px;}
+    .name{font-size:26px;}
+    .job-head{flex-direction:column;gap:2px;}
+    .job-date{white-space:normal;}
+  }
+
+  /* ---------- PRINT ---------- */
+  @media print{
+    body{background:#fff;padding:0;font-size:12.5px;}
+    .page{border:none;box-shadow:none;border-radius:0;max-width:100%;}
+    header{padding:0 0 18px;}
+    main{padding:0;}
+    section{padding-top:20px;}
+    section + section{margin-top:20px;}
+    .cert:hover{transform:none;}
+    a{color:var(--ink);text-decoration:none;}
+    .cert, .job{page-break-inside:avoid;}
+  }
+
+  /* ===== PERBAIKAN KETERBACAAN FONT ===== */
+:root{
+  --ink:#111827;
+  --muted:#374151;
+  --line:#d1d5db;
+  --accent:#0b4f7a;
+  --accent-soft:#eef6fc;
+  --bg:#f3f4f6;
+}
+
+body{
+  font-family:'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size:16px;
+  line-height:1.7;
+  color:var(--ink);
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+
+.name{font-size:34px;font-weight:800;letter-spacing:-.6px;}
+.role{font-size:17px;font-weight:700;color:var(--accent);}
+.tagline{font-size:15.5px;color:var(--muted);max-width:680px;}
+.meta span{font-size:13.5px;color:var(--muted);background:var(--accent-soft);border-color:#d4e3ef;}
+
+h2{font-size:13px;letter-spacing:1.4px;font-weight:800;color:var(--accent);}
+
+p, .lead{font-size:15.5px;color:#2f3743;}
+.focus li{font-size:15px;color:#2f3743;}
+.focus li::before{opacity:1;background:var(--accent);}
+
+.job-title{font-size:16.5px;font-weight:700;color:var(--ink);}
+.job-company{font-size:15px;font-weight:600;color:var(--accent);}
+.job-date{font-size:13.5px;color:var(--muted);}
+.job-loc{font-size:13.5px;color:var(--muted);}
+.job ul li{font-size:15px;color:#2f3743;}
+.job ul li::before{opacity:1;color:var(--accent);font-size:13px;}
+.stack{font-size:13.5px;color:#4b5563;border-left-color:#cfe3f2;}
+.stack strong{color:#1f2937;font-weight:700;}
+
+.cert-name{font-size:15px;font-weight:700;color:var(--ink);}
+.cert-issuer{font-size:13.5px;color:var(--accent);}
+.cert-year{font-size:12.5px;color:var(--muted);}
+
+.chips span{font-size:13.5px;color:#1f2937;background:#f0f4f8;border-color:#d1d9e3;}
+
+footer{font-size:13px;color:var(--muted);}
+
+@media print{
+  body{font-size:13.5px;}
+  .name{font-size:28px;}
+  .role{font-size:15px;}
+}
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <header>
+    <div class="name">Hangga Aji Sayekti</div>
+    <div class="role">Application Security Engineer · Software Engineer · Technical Writer</div>
+    <p class="tagline">
+      Application security engineer focused on API security, web application vulnerabilities,
+      and real-world exploitability in production systems — backed by a decade of software engineering experience.
+    </p>
+
+    <div class="meta">
+      <span>📍 Greater Yogyakarta, Indonesia</span>
+      <span>🔗 <a href="https://hangga.web.id">hangga.web.id</a></span>
+      <span>💼 Open to Security &amp; Engineering roles</span>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== ABOUT ===== -->
+    <!-- <section>
+      <h2>About</h2>
+      <p class="lead">
+        I work at the intersection of software engineering and offensive security, with hands-on experience
+        identifying and analyzing vulnerabilities such as IDOR, authentication and authorization flaws, and
+        business logic issues in modern web and mobile applications.
+      </p>
+      <p class="lead" style="margin-top:12px;">
+        My software engineering background lets me understand application architecture deeply and collaborate
+        effectively with development teams on secure design, code-level fixes, and production-grade remediation.
+        Beyond security engineering, I write technical content that translates complex concepts into practical,
+        developer-focused insights.
+      </p>
+
+      <ul class="focus">
+        <li>API Security &amp; Authorization Models</li>
+        <li>Web Application Security (OWASP Top 10 + beyond)</li>
+        <li>Secure Code Review</li>
+        <li>Vulnerability Research &amp; Exploit Development</li>
+        <li>Security Validation &amp; Proof-of-Concept Engineering</li>
+        <li>Secure Systems at Scale &amp; SDLC Integration</li>
+      </ul>
+    </section> -->
+
+    <!-- ===== EXPERIENCE ===== -->
+    <section>
+      <h2>Experience</h2>
+
+      <!-- The Research Code -->
+      <div class="job">
+        <div class="job-head">
+          <div>
+            <div class="job-title">Expert Writer — Computer Science &amp; Mathematics</div>
+            <div class="job-company">The Research Code · Seasonal</div>
+          </div>
+          <div class="job-date">Sep 2026 – Present</div>
+        </div>
+        <div class="job-loc">Remote</div>
+        <ul>
+          <li>Invited expert writer covering computer science, mathematics, and technology.</li>
+          <li>Translate complex technical concepts, emerging technologies, and scientific findings into clear, accessible, and practically relevant content.</li>
+        </ul>
+      </div>
+
+      <!-- Stealth -->
+      <div class="job">
+        <div class="job-head">
+          <div>
+            <div class="job-title">Software Development | Application Security | Technical Writing</div>
+            <div class="job-company">Stealth · Freelance</div>
+          </div>
+          <div class="job-date">Aug 2024 – Present</div>
+        </div>
+        <ul>
+          <li>Curated collection of application security research, vulnerability disclosures, technical writeups, software development insights, and technology articles.</li>
+          <li>Manual testing · source code analysis · business logic exploration.</li>
+        </ul>
+      </div>
+
+      <!-- CircleCI -->
+      <div class="job">
+        <div class="job-head">
+          <div>
+            <div class="job-title">Technical Code Reviewer &amp; Tech Author</div>
+            <div class="job-company">CircleCI · Freelance</div>
+          </div>
+          <div class="job-date">Feb 2025 – Jul 2026</div>
+        </div>
+        <div class="job-loc">San Francisco, CA · Remote</div>
+        <ul>
+          <li><strong>Technical Code Reviewer</strong> — reviewed and validated technical content, code samples, and repositories to ensure technical accuracy and reproducibility.</li>
+          <li><strong>Tech Author</strong> — authored developer-focused tutorials covering CI/CD automation, application security testing, and JVM performance optimization using real-world examples.</li>
+        </ul>
+      </div>
+
+      <!-- It's FOSS -->
+      <div class="job">
+        <div class="job-head">
+          <div>
+            <div class="job-title">Author — Kali Linux &amp; Security</div>
+            <div class="job-company">It's FOSS · Freelance</div>
+          </div>
+          <div class="job-date">Sep 2025 – Jan 2026</div>
+        </div>
+        <div class="job-loc">Remote</div>
+        <ul>
+          <li>Introduced cybersecurity and penetration testing as a new content category for Linux Handbook.</li>
+          <li>Published 10+ technical articles covering Kali Linux, penetration testing, and offensive security — reaching over 1.1K readers within the first few months.</li>
+          <li>Produced hands-on tutorials focused on practical techniques, real-world tooling, and reproducible labs.</li>
+        </ul>
+      </div>
+
+      <!-- Kredibel -->
+      <div class="job">
+        <div class="job-head">
+          <div>
+            <div class="job-title">Head of Product and Engineering</div>
+            <div class="job-company">Kredibel · Full-time</div>
+          </div>
+          <div class="job-date">Aug 2023 – Feb 2025</div>
+        </div>
+        <div class="job-loc">Jakarta, Indonesia · Remote</div>
+        <ul>
+          <li>R&amp;D for new feature ideas based on company and user needs.</li>
+          <li>R&amp;D for new tech/library implementation required by the product roadmap.</li>
+          <li>Resolved application release problems across Google Play Store and Apple App Store.</li>
+          <li>Continued hands-on work as a software engineer.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <div>
+            <div class="job-title">Senior Software Engineer — Mobile Platform</div>
+            <div class="job-company">Kredibel · Full-time</div>
+          </div>
+          <div class="job-date">Sep 2020 – Feb 2025</div>
+        </div>
+        <div class="job-loc">Jakarta, Indonesia · Remote</div>
+        <ul>
+          <li>Spearheaded development and launch of the company's first native Android and iOS applications, establishing the mobile platform foundation.</li>
+          <li>Designed and developed the Android-based Kredibel Vision SDK, enabling identity verification capabilities in partner applications.</li>
+          <li>Established the company's first private Maven repository, standardizing SDK distribution, dependency management, and versioning.</li>
+          <li>Evaluated and integrated mobile ML technologies (Google ML Kit, Firebase ML Kit, Huawei ML Kit) for computer vision and identity verification.</li>
+          <li>Built proof-of-concept applications and technical prototypes to validate new technologies and support client demos.</li>
+        </ul>
+        <div class="stack">
+          <strong>Stack:</strong> Java · Kotlin · Android Studio · RxJava · Retrofit · Firebase · GitLab · ML Kit ·
+          Xcode · Swift · SwiftUI · Alamofire · CoreData · Maven Repository · Repsy.io · Azure DevOps · Google Artifact Registry
+        </div>
+      </div>
+
+      <!-- Baeldung -->
+      <div class="job">
+        <div class="job-head">
+          <div>
+            <div class="job-title">Author — Java and Kotlin Series</div>
+            <div class="job-company">Baeldung · Freelance</div>
+          </div>
+          <div class="job-date">Oct 2023 – Oct 2024</div>
+        </div>
+        <div class="job-loc">Bucharest, Romania · Remote</div>
+        <ul>
+          <li>Authored practical Java and Kotlin articles helping developers solve real-world programming challenges, from language features and JVM internals to framework-specific issues.</li>
+          <li>Developed reproducible sample projects and automated tests to validate solutions and demonstrate production-ready patterns.</li>
+          <li>Collaborated with editors and technical reviewers to publish accurate, developer-focused content.</li>
+        </ul>
+        <div class="stack">
+          <strong>Published:</strong> Qualified this and Implicit this in Kotlin · Excluding Transitive Dependencies in Gradle ·
+          Configure Kotlin's Bytecode Version with Gradle
+        </div>
+      </div>
+
+      <!-- Sebangsa -->
+      <div class="job">
+        <div class="job-head">
+          <div>
+            <div class="job-title">Lead Engineer</div>
+            <div class="job-company">Sebangsa Network · Full-time</div>
+          </div>
+          <div class="job-date">Aug 2015 – Mar 2020</div>
+        </div>
+        <div class="job-loc">Yogyakarta, Indonesia · Hybrid</div>
+        <ul>
+          <li>Led the engineering team developing an Android application recognized as one of Google Play's Best Apps of 2015 — overseeing architecture, development, code quality, and production releases.</li>
+          <li>Delivered multiple large-scale Android releases while maintaining high stability, performance, and code quality.</li>
+          <li>Built and mentored a high-performing Android engineering team by establishing code review standards, development workflows, and release processes.</li>
+          <li>Introduced modern Android technologies and practices (RxJava, Dagger, Retrofit, MVP) that improved maintainability and development efficiency.</li>
+          <li>Drove technical decisions that enhanced performance, scalability, and user experience across multiple product releases.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <div>
+            <div class="job-title">Senior Android Developer</div>
+            <div class="job-company">Sebangsa Network · Full-time</div>
+          </div>
+          <div class="job-date">2015 – 2017</div>
+        </div>
+        <div class="job-loc">Yogyakarta, Indonesia</div>
+        <ul>
+          <li>Contributed to Sebangsa, Arena, and "M" projects, and mentored junior engineers.</li>
+        </ul>
+        <div class="stack">
+          <strong>Stack:</strong> Android Studio · Java · RxJava · Retrofit · OkHttp · JSON · Gson · Firebase · Dagger · MVP · GitLab · Subversion
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <div>
+            <div class="job-title">Android Developer</div>
+            <div class="job-company">Sebangsa Network · Full-time</div>
+          </div>
+          <div class="job-date">Jan 2013 – Aug 2015</div>
+        </div>
+        <div class="job-loc">Yogyakarta, Indonesia</div>
+        <ul>
+          <li>Developed the Sebangsa apps from scratch.</li>
+        </ul>
+        <div class="stack">
+          <strong>Stack:</strong> Android Studio · Java · Retrofit · OkHttp · JSON · Gson · GCM · MVP · GitLab · Subversion
+        </div>
+      </div>
+
+      <!-- Pondok Programmer -->
+      <div class="job">
+        <div class="job-head">
+          <div>
+            <div class="job-title">Android Development Mentor</div>
+            <div class="job-company">Pondok Programmer</div>
+          </div>
+          <div class="job-date">Jun 2015 – Dec 2015</div>
+        </div>
+        <div class="job-loc">Bantul, Indonesia</div>
+        <ul>
+          <li>Taught classes and built the syllabus, including materials and sample projects.</li>
+          <li>Monitored student progress and provided consultation.</li>
+        </ul>
+        <div class="stack">
+          <strong>Stack:</strong> Java · Eclipse IDE · Android SDK · XML · Layouting · Motion Animation · Basic Game Development
+        </div>
+      </div>
+
+      <!-- UNY -->
+      <div class="job">
+        <div class="job-head">
+          <div>
+            <div class="job-title">Information System / Programmer</div>
+            <div class="job-company">Universitas Negeri Yogyakarta</div>
+          </div>
+          <div class="job-date">Mar 2010 – Dec 2012</div>
+        </div>
+        <div class="job-loc">Yogyakarta, Indonesia</div>
+        <ul>
+          <li>Developed and maintained information systems including student registration, financial monitoring, internet services, and the rector election vote-counting system (SitungRek).</li>
+          <li>Built websites for seminars, scientific events, and workshops.</li>
+          <li>Assisted IT training mentors for lecturers and staff, and supported IT for campus events.</li>
+        </ul>
+        <div class="stack">
+          <strong>Stack:</strong> Delphi 7 · PHP · CodeIgniter · CSS · HTML · jQuery · MySQL · PostgreSQL · WebService · SOAP
+        </div>
+      </div>
+
+      <!-- Solusi Netindo -->
+      <div class="job">
+        <div class="job-head">
+          <div>
+            <div class="job-title">Delphi Programmer</div>
+            <div class="job-company">CV. Solusi Netindo</div>
+          </div>
+          <div class="job-date">Jun 2008 – Nov 2010</div>
+        </div>
+        <div class="job-loc">Yogyakarta, Indonesia</div>
+        <ul>
+          <li>Developed Windows applications including Management Information Systems, Inventory Systems, Airline Ticketing Systems, and Ship Port Information Systems.</li>
+        </ul>
+        <div class="stack">
+          <strong>Stack:</strong> Borland Delphi · Interbase · Firebird · SQL · Microsoft SQL Server
+        </div>
+      </div>
+
+      <!-- Earlier -->
+      <div class="job">
+        <div class="job-head">
+          <div>
+            <div class="job-title">Mathematics Tutor</div>
+            <div class="job-company">Self-employed</div>
+          </div>
+          <div class="job-date">2003 – 2007</div>
+        </div>
+        <div class="job-loc">Yogyakarta, Indonesia</div>
+        <ul>
+          <li>Taught Mathematics privately for Elementary and Junior High School students.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <div>
+            <div class="job-title">Layout Editor</div>
+            <div class="job-company">CV Mutiara Tiga Prima · Part-time</div>
+          </div>
+          <div class="job-date">2003 – 2004</div>
+        </div>
+        <div class="job-loc">Yogyakarta, Indonesia</div>
+        <ul>
+          <li>Layout editing with CorelDRAW 11, print-to-plate, print mirror, and print to tracing paper.</li>
+          <li>Delivered printed scripts to machine operators and supported finishing work.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== EDUCATION ===== -->
+    <section>
+      <h2>Education</h2>
+      <div class="edu-head">
+        <div>
+          <div class="job-title">Yogyakarta State University</div>
+          <div class="job-company">S1 / Bachelor — Mathematics</div>
+        </div>
+        <div class="job-date">2002 – 2009</div>
+      </div>
+    </section>
+
+    <!-- ===== CERTIFICATIONS ===== -->
+    <section>
+      <h2>Licenses &amp; Certifications</h2>
+      <div class="cert-grid">
+
+        <div class="cert">
+          <div class="cert-name">Ethical Hacker</div>
+          <div class="cert-issuer">Cisco Networking Academy</div>
+          <div class="cert-year">Issued Nov 2025</div>
+        </div>
+
+        <div class="cert">
+          <div class="cert-name">Secure AI/ML-Driven Software Development (LFEL1012)</div>
+          <div class="cert-issuer">The Linux Foundation</div>
+          <div class="cert-year">Issued Nov 2025</div>
+        </div>
+
+        <div class="cert">
+          <div class="cert-name">Understanding the OWASP® Top 10 Security Threats (SKF100)</div>
+          <div class="cert-issuer">The Linux Foundation</div>
+          <div class="cert-year">Issued Nov 2025</div>
+        </div>
+
+        <div class="cert">
+          <div class="cert-name">Android Bug Bounty Hunting: Hunt Like a Rat</div>
+          <div class="cert-issuer">EC-Council</div>
+          <div class="cert-year">Issued Jul 2025 · ID 6c69658e</div>
+        </div>
+
+        <div class="cert">
+          <div class="cert-name">Introduction to Penetration Testing</div>
+          <div class="cert-issuer">Security Blue Team</div>
+          <div class="cert-year">Issued Jul 2025 · ID 281113316</div>
+        </div>
+
+        <div class="cert">
+          <div class="cert-name">SQL Injection Attacks</div>
+          <div class="cert-issuer">EC-Council</div>
+          <div class="cert-year">Issued Jul 2025 · ID f773daad</div>
+        </div>
+
+        <div class="cert">
+          <div class="cert-name">ISMS Awareness ISO/IEC 27001:2022</div>
+          <div class="cert-issuer">PT. Bhinneka Inti Global Data (BIG DATA)</div>
+          <div class="cert-year">Issued Jun 2023 · ID 003/ISO.AT-ISMS/VI/2023</div>
+        </div>
+
+        <div class="cert">
+          <div class="cert-name">JavaScript (Intermediate) Certificate</div>
+          <div class="cert-issuer">HackerRank</div>
+          <div class="cert-year">Issued May 2023 · ID fb5eb8a41cc2</div>
+        </div>
+
+        <div class="cert">
+          <div class="cert-name">SQL (Advanced) Certificate</div>
+          <div class="cert-issuer">HackerRank</div>
+          <div class="cert-year">Issued Jun 2023 · ID 3e3a63e4cea3</div>
+        </div>
+
+        <div class="cert">
+          <div class="cert-name">Ethical Hacking — Mobile Platforms &amp; Network Architecture</div>
+          <div class="cert-issuer">Great Learning</div>
+          <div class="cert-year">Issued May 2023 · ID FMIJJQZP</div>
+        </div>
+
+        <div class="cert">
+          <div class="cert-name">ISMS Awareness ISO/IEC 27001:2013</div>
+          <div class="cert-issuer">PT. Bhinneka Inti Global Data (BIG DATA)</div>
+          <div class="cert-year">Issued Jul 2022 · ID 011/ISO-ISMS/VII/2022</div>
+        </div>
+
+        <div class="cert">
+          <div class="cert-name">Problem Solving (Basic) Certificate</div>
+          <div class="cert-issuer">HackerRank</div>
+          <div class="cert-year">Issued May 2022 · ID 59953a142421</div>
+        </div>
+
+        <div class="cert">
+          <div class="cert-name">Rest API (Intermediate)</div>
+          <div class="cert-issuer">HackerRank</div>
+          <div class="cert-year">Issued Apr 2022 · ID 8dc7f5e68465</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section>
+      <h2>Skills</h2>
+      <div class="chips">
+        <span>Application Security</span>
+        <span>API Security</span>
+        <span>OWASP Top 10</span>
+        <span>Penetration Testing</span>
+        <span>Vulnerability Research</span>
+        <span>Secure Code Review</span>
+        <span>Burp Suite</span>
+        <span>Kali Linux</span>
+        <span>SQL Injection</span>
+        <span>Information Security Consulting</span>
+        <span>Android Development</span>
+        <span>Kotlin</span>
+        <span>Java</span>
+        <span>Swift</span>
+        <span>CI/CD</span>
+        <span>CircleCI</span>
+        <span>Gradle</span>
+        <span>Maven</span>
+        <span>GitLab</span>
+        <span>Azure DevOps</span>
+        <span>PostgreSQL</span>
+        <span>MariaDB</span>
+        <span>JavaScript</span>
+        <span>PHP</span>
+        <span>Technical Writing</span>
+        <span>Leadership</span>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div>Hangga Aji Sayekti · Application Security Engineer</div>
+    <div><a href="https://hangga.web.id">hangga.web.id</a> · Greater Yogyakarta, Indonesia</div>
+  </footer>
+
+</div>
+
+</body>
+</html>
